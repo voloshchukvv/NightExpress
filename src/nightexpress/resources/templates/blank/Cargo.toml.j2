@@ -1,0 +1,25 @@
+[package]
+name = "{{ project_name }}"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+embassy-stm32 = { version = "0.6.0", features = ["{{ embassy_feature }}", "memory-x"] }
+cortex-m = { version = "0.7.7", features = ["critical-section-single-core"] }
+cortex-m-rt = "0.7.5"
+panic-halt = "1.0.0"
+
+[profile.dev]
+opt-level = "s"
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+debug = true
+
+[package.metadata.nightexpress]
+schema = 1
+board = "{{ board_id }}"
+upload_method = "{{ upload_method }}"

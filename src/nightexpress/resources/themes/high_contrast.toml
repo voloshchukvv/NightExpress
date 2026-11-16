@@ -1,0 +1,75 @@
+# High Contrast: Black background, white text, visible borders: text contrast is at least 7:1.
+
+id = "high_contrast"
+name = { uk = "Висока контрастність", en = "High Contrast", es = "Alto contraste", fr = "Contraste élevé", de = "Hoher Kontrast" }
+dark = true
+
+# Black, red, green, yellow, blue, magenta, cyan, white — normal, then bright.
+ansi = [
+    "#8a9299", "#ff8a90", "#9be89b", "#ffd866", "#8cc8ff", "#e3a6f5", "#7fe3ee", "#ffffff",
+    "#b3bac1", "#ffb3b7", "#c2f5c2", "#ffe699", "#b9dcff", "#f0c8fa", "#aef1f8", "#ffffff",
+]
+
+[colors]
+background = "#000000"
+surface = "#0a0a0a"
+surface_alt = "#1c1c1c"
+selection = "#0b5d50"
+header = "#000000"
+editor = "#000000"
+border = "#737b83"
+outline = "#8b949c"
+control_border = "#9aa3ab"
+control_hover = "#2c2c2c"
+control_pressed = "#121212"
+control_disabled_text = "#8a9299"
+checkbox_border = "#c0c6cc"
+scrollbar = "#7b848c"
+scrollbar_hover = "#a8b0b7"
+focus = "#ffffff"
+arrow = "#ffffff"
+text = "#ffffff"
+text_muted = "#c8ced4"
+disabled_text = "#7d858c"
+accent = "#4de3c7"
+accent_hover = "#7cf0db"
+accent_pressed = "#2fc4a9"
+accent_bright = "#6ff2da"
+accent_soft = "#0b3a33"
+accent_soft_hover = "#0f4d43"
+accent_soft_pressed = "#082b26"
+accent_border = "#4de3c7"
+accent_muted = "#39b8a1"
+accent_text = "#000000"
+accent_icon_background = "#0f4d43"
+accent_gradient_end = "#0f4a41"
+success = "#5cf29a"
+ok = "#9be89b"
+warning = "#ffd866"
+error = "#ff8a90"
+error_soft = "#4a1218"
+error_soft_hover = "#641a22"
+error_soft_pressed = "#360d12"
+error_border = "#ff8a90"
+error_text = "#ffe3e5"
+info = "#8cc8ff"
+toast_border = "#9aa3ab"
+toast_text = "#ffffff"
+search_match = "#4f3d00"
+search_match_current = "#7a5f00"
+
+# Monaco colour ids; "#rrggbbaa" adds transparency.
+[editor.colors]
+"editor.background" = "#000000"
+"editor.lineHighlightBackground" = "#ffffff14"
+"editorLineNumber.foreground" = "#9aa3ab"
+"editorLineNumber.activeForeground" = "#ffffff"
+"editorCursor.foreground" = "#4de3c7"
+"editor.selectionBackground" = "#4de3c766"
+"editorIndentGuide.background1" = "#3a3f44"
+"editorGutter.background" = "#000000"
+
+# Monaco token names on top of the built-in syntax colours.
+[editor.tokens]
+key = "#7fe3ee"
+type = "#ffd866"

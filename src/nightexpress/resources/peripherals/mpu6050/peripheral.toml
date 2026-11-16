@@ -1,0 +1,43 @@
+# A module the "Add peripheral" dialog can add to a project. The snippets are Jinja2:
+# p (the name of the peripherals from embassy_stm32::init), bus, scl, sda (the chosen pins) and
+# i2c (this module's device on the shared bus, e.g. RefCellDevice::new(&i2c1)).
+id = "mpu6050"
+name = "MPU-6050"
+module = "mpu6050"   # the driver becomes src/mpu6050.rs, used through `mod mpu6050;`
+bus = "i2c"
+
+# Module pin -> board pin; {scl} and {sda} are the I2C pins of the board.
+wiring = [["VCC", "3.3V"], ["GND", "GND"], ["SCL", "{scl}"], ["SDA", "{sda}"]]
+
+init = """
+// MPU-6050 on {{ bus }} (added by "Add peripheral").
+let mut mpu = mpu6050::Mpu6050::new({{ i2c }});
+match mpu.init() {
+    Ok(id) => {
+        defmt::info!("MPU-6050 found, WHO_AM_I = {=u8:#x}; keep it still for the gyro calibration", id);
+        if let Ok(offset) = mpu.calibrate_gyro(200) {
+            defmt::info!("gyro offset at rest, mdps: {} {} {}", offset[0], offset[1], offset[2]);
+        }
+    }
+    Err(mpu6050::Error::UnknownDevice(id)) => defmt::error!("MPU-6050: WHO_AM_I = {=u8:#x}, no sensor at this address", id),
+    Err(_) => defmt::error!("MPU-6050 does not answer: check the wires, 3.3 V and the address"),
+}
+"""
+
+loop = """
+if let Ok(r) = mpu.read() {
+    defmt::info!(
+        "accel mg {} {} {} | gyro mdps {} {} {} | {}.{} C",
+        r.accel_mg[0], r.accel_mg[1], r.accel_mg[2],
+        r.gyro_mdps[0], r.gyro_mdps[1], r.gyro_mdps[2],
+        r.temperature_centi_c / 100, (r.temperature_centi_c % 100).abs() / 10,
+    );
+}
+"""
+
+[description]
+uk = "Акселерометр і гіроскоп (модуль GY-521). Значення прискорення, обертання й температури йдуть у вкладку RTT."
+en = "Accelerometer and gyroscope (GY-521 module). Acceleration, rotation and temperature go to the RTT tab."
+es = "Acelerómetro y giroscopio (módulo GY-521). La aceleración, la rotación y la temperatura van a la pestaña RTT."
+fr = "Accéléromètre et gyroscope (module GY-521). L’accélération, la rotation et la température vont dans l’onglet RTT."
+de = "Beschleunigungssensor und Gyroskop (Modul GY-521). Beschleunigung, Drehung und Temperatur erscheinen in der Registerkarte RTT."

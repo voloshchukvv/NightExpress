@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "examples": [
+    {
+      "id": "blink",
+      "title": "Blink",
+      "description": {
+        "uk": "Блимання світлодіодом на платі раз на секунду.",
+        "en": "Blinks the on-board LED once a second.",
+        "es": "Hace parpadear el LED de la placa una vez por segundo.",
+        "fr": "Fait clignoter la LED de la carte une fois par seconde.",
+        "de": "Lässt die LED der Platine einmal pro Sekunde blinken."
+      },
+      "template": "blink",
+      "boards": [
+        "stm32f103c6-minimal",
+        "stm32f103c8-bluepill",
+        "stm32f411ce-blackpill",
+        "stm32f401cc-blackpill",
+        "nucleo-f103rb",
+        "nucleo-f401re",
+        "nucleo-f411re",
+        "nucleo-f446re",
+        "nucleo-l476rg"
+      ]
+    },
+    {
+      "id": "serial_hello",
+      "title": "Serial Hello",
+      "description": {
+        "uk": "Щосекунди надсилає «Hello» через UART і повертає назад отримане.",
+        "en": "Sends “Hello” over UART every second and echoes back what it receives.",
+        "es": "Envía «Hello» por UART cada segundo y devuelve lo que recibe.",
+        "fr": "Envoie « Hello » par UART chaque seconde et renvoie ce qu’il reçoit.",
+        "de": "Sendet jede Sekunde „Hello“ über UART und schickt Empfangenes zurück."
+      },
+      "template": "serial_hello",
+      "boards": [
+        "stm32f103c6-minimal",
+        "stm32f103c8-bluepill",
+        "stm32f411ce-blackpill",
+        "stm32f401cc-blackpill",
+        "nucleo-f103rb",
+        "nucleo-f401re",
+        "nucleo-f411re",
+        "nucleo-f446re",
+        "nucleo-l476rg"
+      ]
+    },
+    {
+      "id": "button",
+      "title": "Button",
+      "description": {
+        "uk": "Світлодіод світиться, поки натиснуто кнопку.",
+        "en": "The LED is on while the button is pressed.",
+        "es": "El LED se enciende mientras se pulsa el botón.",
+        "fr": "La LED s’allume tant que le bouton est appuyé.",
+        "de": "Die LED leuchtet, solange der Taster gedrückt ist."
+      },
+      "template": "button",
+      "boards": [
+        "stm32f103c6-minimal",
+        "stm32f103c8-bluepill",
+        "stm32f411ce-blackpill",
+        "stm32f401cc-blackpill",
+        "nucleo-f103rb",
+        "nucleo-f401re",
+        "nucleo-f411re",
+        "nucleo-f446re",
+        "nucleo-l476rg"
+      ]
+    },
+    {
+      "id": "rtt_hello",
+      "title": "RTT Hello",
+      "description": {
+        "uk": "Пише повідомлення в журнал через ST-Link (defmt + RTT) — без USB-TTL адаптера.",
+        "en": "Logs messages through the ST-Link (defmt + RTT), no USB-TTL adapter needed.",
+        "es": "Escribe mensajes en el registro a través del ST-Link (defmt + RTT), sin adaptador USB-TTL.",
+        "fr": "Écrit des messages dans le journal via le ST-Link (defmt + RTT), sans adaptateur USB-TTL.",
+        "de": "Schreibt Meldungen über den ST-Link ins Protokoll (defmt + RTT), ohne USB-TTL-Adapter."
+      },
+      "template": "rtt_hello",
+      "boards": [
+        "stm32f103c6-minimal",
+        "stm32f103c8-bluepill",
+        "stm32f411ce-blackpill",
+        "stm32f401cc-blackpill",
+        "nucleo-f103rb",
+        "nucleo-f401re",
+        "nucleo-f411re",
+        "nucleo-f446re",
+        "nucleo-l476rg"
+      ]
+    }
+  ]
+}

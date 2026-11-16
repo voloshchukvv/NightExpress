@@ -1,0 +1,2 @@
+   Compiling blinky_f103c6 v0.1.0 (/work/blinky_f103c6)
+error: could not compile `blinky_f103c6` (bin "blinky_f103c6") due to 1 previous error

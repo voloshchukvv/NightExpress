@@ -1,0 +1,75 @@
+# Ocean: The graphite layout with blue-tinted surfaces and a blue accent.
+
+id = "ocean"
+name = { uk = "Океан", en = "Ocean", es = "Océano", fr = "Océan", de = "Ozean" }
+dark = true
+
+# Black, red, green, yellow, blue, magenta, cyan, white — normal, then bright.
+ansi = [
+    "#5f666d", "#f07178", "#7fd17f", "#e5c07b", "#61afef", "#c678dd", "#56b6c2", "#e6e8ea",
+    "#7f868d", "#ff8a8a", "#98e698", "#ffd580", "#82c4ff", "#dd99ee", "#7fd1c1", "#ffffff",
+]
+
+[colors]
+background = "#11151b"
+surface = "#171c23"
+surface_alt = "#1f252e"
+selection = "#1f3a63"
+header = "#191e25"
+editor = "#13171d"
+border = "#2b323c"
+outline = "#37404b"
+control_border = "#3a4452"
+control_hover = "#29323e"
+control_pressed = "#171e27"
+control_disabled_text = "#737d85"
+checkbox_border = "#5f666d"
+scrollbar = "#37404b"
+scrollbar_hover = "#48525f"
+focus = "#a9c8ff"
+arrow = "#c9cdd1"
+text = "#e6e8ea"
+text_muted = "#9aa1a8"
+disabled_text = "#5f666d"
+accent = "#4c8dff"
+accent_hover = "#73a6ff"
+accent_pressed = "#3a73d9"
+accent_bright = "#7ab0ff"
+accent_soft = "#172a45"
+accent_soft_hover = "#1f3860"
+accent_soft_pressed = "#12223a"
+accent_border = "#31507d"
+accent_muted = "#2f5596"
+accent_text = "#0b1626"
+accent_icon_background = "#254573"
+accent_gradient_end = "#1f3a63"
+success = "#3ddc84"
+ok = "#7fd17f"
+warning = "#e5c07b"
+error = "#f07178"
+error_soft = "#3b272d"
+error_soft_hover = "#503039"
+error_soft_pressed = "#302025"
+error_border = "#9c535d"
+error_text = "#ffd9dc"
+info = "#61afef"
+toast_border = "#454b51"
+toast_text = "#c9cdd1"
+search_match = "#5a4a1f"
+search_match_current = "#8a6d1a"
+
+# Monaco colour ids; "#rrggbbaa" adds transparency.
+[editor.colors]
+"editor.background" = "#13171d"
+"editor.lineHighlightBackground" = "#1e242c80"
+"editorLineNumber.foreground" = "#5f666d"
+"editorLineNumber.activeForeground" = "#e6e8ea"
+"editorCursor.foreground" = "#4c8dff"
+"editor.selectionBackground" = "#4c8dff40"
+"editorIndentGuide.background1" = "#29303a"
+"editorGutter.background" = "#13171d"
+
+# Monaco token names on top of the built-in syntax colours.
+[editor.tokens]
+key = "#8fc1ff"
+type = "#e5c07b"

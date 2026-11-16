@@ -1,0 +1,10 @@
+# The drivers "Add peripheral" copies into projects, compiled and tested on the computer
+# (cargo test): their maths is checked against the datasheets without a board.
+[package]
+name = "nightexpress-driver-tests"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+embedded-hal = "1.0"

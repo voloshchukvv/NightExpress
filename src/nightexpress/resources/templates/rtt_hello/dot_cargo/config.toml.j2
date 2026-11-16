@@ -1,0 +1,9 @@
+[build]
+target = "{{ target_triple }}"   # {{ core_description }}
+
+[target.{{ target_triple }}]
+# defmt.x places the defmt strings in the ELF: they stay on the computer, not in the flash.
+rustflags = ["-C", "link-arg=-Tlink.x", "-C", "link-arg=-Tdefmt.x"]
+
+[env]
+DEFMT_LOG = "info"   # the lowest level that is logged: trace, debug, info, warn or error

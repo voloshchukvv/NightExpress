@@ -1,0 +1,2 @@
+   Compiling sensors v0.1.0 (/work/sensors)
+    Finished `release` profile [optimized + debuginfo] target(s) in 0.23s

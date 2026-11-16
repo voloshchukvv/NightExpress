@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    html, body, #container { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; }
+    .context-view.monaco-menu-container {
+      --vscode-cornerRadius-large: 10px;
+      --vscode-strokeThickness: 1px;
+      border-radius: var(--vscode-cornerRadius-large);
+    }
+    .monaco-menu-container .monaco-action-bar.vertical:not(:has(.action-menu-item.checked))
+    .action-label:not(.separator) {
+      padding-inline-start: 8px;
+    }
+    .monaco-menu-container .monaco-action-bar.vertical .action-menu-item
+    > :is(.action-label, .keybinding):last-child {
+      padding-inline-end: 8px;
+    }
+    /* The command palette is drawn like the application's quick open (⌘P): a rounded panel,
+       a roomy query field, accent-tinted current row. Colours come from the theme. */
+    .quick-input-widget {
+      --vscode-cornerRadius-xLarge: 8px;
+      --vscode-cornerRadius-medium: 7px;
+      top: 6px !important;
+      padding: 8px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    .quick-input-widget .quick-input-header { padding: 0 0 6px; }
+    .quick-input-widget .quick-input-filter .monaco-inputbox { padding: 4px 6px; }
+    .quick-input-widget .quick-input-filter .monaco-inputbox .input { font-size: 15px; }
+    .quick-input-widget .monaco-inputbox.synthetic-focus,
+    .quick-input-widget .monaco-inputbox .input { outline: none !important; }
+    .quick-input-widget .monaco-inputbox.synthetic-focus,
+    .quick-input-widget .monaco-inputbox:focus-within {
+      border-color: var(--vscode-focusBorder) !important;
+    }
+    /* Monaco lays the rows out at a fixed 22 px; zooming the list makes them roomier. */
+    .quick-input-list { zoom: 1.25; font-size: 12px; }
+    .quick-input-list .monaco-scrollable-element { padding: 0; }
+    .quick-input-list .monaco-list { padding-bottom: 0 !important; }
+    .quick-input-list .monaco-scrollable-element > .shadow { display: none; }
+    .quick-input-list .monaco-scrollable-element > .scrollbar > .slider { border-radius: 3px; }
+    .quick-input-list .monaco-list-row { border-radius: 4px; }
+    .quick-input-list > .monaco-list:focus .monaco-list-row.focused { outline: none !important; }
+    .quick-input-list .quick-input-list-entry .quick-input-list-entry-keybinding { margin-right: 4px; }
+    .quick-input-list .monaco-keybinding > .monaco-keybinding-key {
+      border-radius: 4px;
+      box-shadow: none !important;
+    }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+  <script src="qrc:///qtwebchannel/qwebchannel.js"></script>
+  <script src="monaco/vs/loader.js"></script>
+  <script src="editor.js"></script>
+</body>
+</html>

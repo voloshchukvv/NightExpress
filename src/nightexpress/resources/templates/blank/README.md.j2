@@ -1,0 +1,17 @@
+# {{ project_name }}
+
+A minimal Rust firmware project created with the **Blank Project** template.
+The starter code in `src/main.rs` waits for interrupts.
+
+## Target board
+
+**{{ board_name_en }}** uses the `{{ chip_id }}` microcontroller with
+{{ flash_kb }} KB of flash and {{ ram_kb }} KB of RAM. The Rust target is `{{ target_triple }}`.
+
+## Build from the command line
+
+```sh
+cargo build --release
+```
+
+The firmware ELF is written to `target/{{ target_triple }}/release/{{ project_name }}`.

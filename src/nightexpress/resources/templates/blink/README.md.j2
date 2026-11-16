@@ -1,0 +1,17 @@
+# {{ project_name }}
+
+The **Blink** example flashes the LED on `{{ led_pin }}` about once per second.
+The LED is {{ "active low" if led_active_low else "active high" }}.
+
+## Target board
+
+**{{ board_name_en }}** uses the `{{ chip_id }}` microcontroller with
+{{ flash_kb }} KB of flash and {{ ram_kb }} KB of RAM. The Rust target is `{{ target_triple }}`.
+
+## Build from the command line
+
+```sh
+cargo build --release
+```
+
+The firmware ELF is written to `target/{{ target_triple }}/release/{{ project_name }}`.

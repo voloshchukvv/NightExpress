@@ -1,0 +1,75 @@
+# Light: Light surfaces, dark text; the teal accent is darkened to stay readable.
+
+id = "light"
+name = { uk = "Світла", en = "Light", es = "Clara", fr = "Clair", de = "Hell" }
+dark = false
+
+# Black, red, green, yellow, blue, magenta, cyan, white — normal, then bright.
+ansi = [
+    "#1c2126", "#c22d38", "#2b7f3a", "#8f5f00", "#1a62cc", "#9336b8", "#0d7480", "#6a737c",
+    "#56606a", "#d43542", "#1c8f4c", "#a16c00", "#2a74e6", "#a847cf", "#108896", "#3a424a",
+]
+
+[colors]
+background = "#e9ecef"
+surface = "#fbfbfc"
+surface_alt = "#f1f3f5"
+selection = "#cdeee6"
+header = "#f5f6f8"
+editor = "#ffffff"
+border = "#d7dce1"
+outline = "#c6ccd2"
+control_border = "#bfc6cd"
+control_hover = "#e4e8eb"
+control_pressed = "#d6dbe0"
+control_disabled_text = "#959da5"
+checkbox_border = "#868f98"
+scrollbar = "#c3c9cf"
+scrollbar_hover = "#a6aeb6"
+focus = "#0f8a75"
+arrow = "#4b535b"
+text = "#1c2126"
+text_muted = "#56606a"
+disabled_text = "#a0a8b0"
+accent = "#11796a"
+accent_hover = "#158b79"
+accent_pressed = "#0d6557"
+accent_bright = "#0e7766"
+accent_soft = "#dbf2ed"
+accent_soft_hover = "#c8ebe3"
+accent_soft_pressed = "#b5e2d8"
+accent_border = "#8ccdbf"
+accent_muted = "#6cbdab"
+accent_text = "#ffffff"
+accent_icon_background = "#bde7dd"
+accent_gradient_end = "#cbede5"
+success = "#1a7f45"
+ok = "#2b7f3a"
+warning = "#8f5f00"
+error = "#c22d38"
+error_soft = "#fbe3e5"
+error_soft_hover = "#f6cfd3"
+error_soft_pressed = "#f0bbc0"
+error_border = "#e2989f"
+error_text = "#8c1c26"
+info = "#1a62cc"
+toast_border = "#c6ccd2"
+toast_text = "#3a424a"
+search_match = "#fff0b3"
+search_match_current = "#ffd24d"
+
+# Monaco colour ids; "#rrggbbaa" adds transparency.
+[editor.colors]
+"editor.background" = "#ffffff"
+"editor.lineHighlightBackground" = "#eef1f380"
+"editorLineNumber.foreground" = "#a0a8b0"
+"editorLineNumber.activeForeground" = "#1c2126"
+"editorCursor.foreground" = "#11796a"
+"editor.selectionBackground" = "#11796a33"
+"editorIndentGuide.background1" = "#e2e6e9"
+"editorGutter.background" = "#ffffff"
+
+# Monaco token names on top of the built-in syntax colours.
+[editor.tokens]
+key = "#0d6c78"
+type = "#855700"

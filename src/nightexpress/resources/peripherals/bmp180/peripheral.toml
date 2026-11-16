@@ -1,0 +1,36 @@
+# A module the "Add peripheral" dialog can add to a project. The snippets are Jinja2:
+# p (the name of the peripherals from embassy_stm32::init), bus, scl, sda (the chosen pins) and
+# i2c (this module's device on the shared bus, e.g. RefCellDevice::new(&i2c1)).
+id = "bmp180"
+name = "BMP180"
+module = "bmp180"   # the driver becomes src/bmp180.rs, used through `mod bmp180;`
+bus = "i2c"
+
+# Module pin -> board pin; {scl} and {sda} are the chosen I2C pins.
+wiring = [["VCC", "3.3V"], ["GND", "GND"], ["SCL", "{scl}"], ["SDA", "{sda}"]]
+
+init = """
+// BMP180 on {{ bus }} (added by "Add peripheral").
+let mut bmp = bmp180::Bmp180::new({{ i2c }});
+match bmp.init() {
+    Ok(_) => defmt::info!("BMP180 found"),
+    Err(bmp180::Error::UnknownDevice(id)) => defmt::error!("BMP180: CHIP_ID = {=u8:#x}, another chip at 0x77", id),
+    Err(_) => defmt::error!("BMP180 does not answer: check the wires and 3.3 V"),
+}
+"""
+
+loop = """
+if let Ok(r) = bmp.read() {
+    defmt::info!(
+        "BMP180: {}.{} C | {} Pa",  // 101325 Pa = 1013.25 hPa
+        r.temperature_deci_c / 10, (r.temperature_deci_c % 10).abs(), r.pressure_pa,
+    );
+}
+"""
+
+[description]
+uk = "Барометр і термометр (модуль GY-68). Тиск і температура йдуть у вкладку RTT."
+en = "Barometer and thermometer (GY-68 module). Pressure and temperature go to the RTT tab."
+es = "Barómetro y termómetro (módulo GY-68). La presión y la temperatura van a la pestaña RTT."
+fr = "Baromètre et thermomètre (module GY-68). La pression et la température vont dans l’onglet RTT."
+de = "Barometer und Thermometer (Modul GY-68). Druck und Temperatur erscheinen in der Registerkarte RTT."

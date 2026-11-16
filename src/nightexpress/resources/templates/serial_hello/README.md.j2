@@ -1,0 +1,27 @@
+# {{ project_name }}
+
+The **Serial Hello** example sends `Hello from STM32 #N` about once per second over `{{ uart_peripheral }}`
+and echoes received bytes. The LED on `{{ led_pin }}` blinks about once every two seconds.
+
+## Target board
+
+**{{ board_name_en }}** uses the `{{ chip_id }}` microcontroller with
+{{ flash_kb }} KB of flash and {{ ram_kb }} KB of RAM. The Rust target is `{{ target_triple }}`.
+
+## Connect a USB-to-UART adapter
+
+| Board | Adapter |
+| --- | --- |
+| `{{ uart_tx_pin }}` (TX) | RX |
+| `{{ uart_rx_pin }}` (RX) | TX |
+| GND | GND |
+
+Open the **UART** tab in NightExpress or use a serial terminal at **115200 baud, 8N1**.
+
+## Build from the command line
+
+```sh
+cargo build --release
+```
+
+The firmware ELF is written to `target/{{ target_triple }}/release/{{ project_name }}`.

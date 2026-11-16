@@ -1,0 +1,2968 @@
+# en: translation of the NightExpress interface.
+msgid ""
+msgstr ""
+"Project-Id-Version: NightExpress 0.1.0\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-11-16 22:45+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: src/nightexpress/controllers/app_controller.py src/nightexpress/controllers/upload_controller.py
+#: src/nightexpress/views/main_window.py
+msgid "Як підключити ST-Link"
+msgstr "How to connect an ST-Link"
+
+#: src/nightexpress/controllers/app_controller.py
+msgid ""
+"SWDIO → SWDIO (PA13), SWCLK → SWCLK (PA14), GND → GND, 3.3V → 3.3V. Перемичка BOOT0 = 0. Потім "
+"виберіть ST-Link у меню «Вибрати пристрій»."
+msgstr ""
+"SWDIO → SWDIO (PA13), SWCLK → SWCLK (PA14), GND → GND, 3.3V → 3.3V. Jumper BOOT0 = 0. Then choose"
+" the ST-Link in the “Choose device” menu."
+
+#: src/nightexpress/controllers/app_controller.py src/nightexpress/views/main_window.py
+msgid "Як підключити USB-TTL"
+msgstr "How to connect a USB-TTL adapter"
+
+#: src/nightexpress/controllers/app_controller.py
+msgid ""
+"Для STM32F1: TX адаптера → PA10, RX адаптера → PA9, GND → GND, рівень 3.3 V. Перед прошиванням: "
+"BOOT0 = 1 і натиснути Reset; після — повернути BOOT0 = 0."
+msgstr ""
+"For STM32F1: adapter TX → PA10, adapter RX → PA9, GND → GND, 3.3 V logic. Before flashing: BOOT0 "
+"= 1 and press Reset; afterwards set BOOT0 = 0 again."
+
+#: src/nightexpress/controllers/app_controller.py src/nightexpress/views/main_window.py
+msgid "Як прошити через USB (DFU)"
+msgstr "How to flash over USB (DFU)"
+
+#: src/nightexpress/controllers/app_controller.py
+msgid ""
+"Для Black Pill (STM32F401/F411) адаптер не потрібен: під'єднайте плату кабелем USB, затисніть "
+"BOOT0, натисніть і відпустіть Reset (NRST), відпустіть BOOT0. Плата з'явиться в меню «Вибрати "
+"пристрій» як STM32 BOOTLOADER. Потрібен dfu-util; після прошивання програма запускається сама."
+msgstr ""
+"A Black Pill (STM32F401/F411) needs no adapter: connect the board with a USB cable, hold BOOT0, "
+"press and release Reset (NRST), release BOOT0. The board appears in the “Select device” menu as "
+"STM32 BOOTLOADER. dfu-util is required; after flashing the program starts by itself."
+
+#: src/nightexpress/controllers/app_controller.py src/nightexpress/views/settings_panel.py
+msgid "Тека для нових проєктів"
+msgstr "Folder for new projects"
+
+#: src/nightexpress/controllers/app_controller.py
+#, python-brace-format
+msgid "Розмір шрифту: {size} pt"
+msgstr "Font size: {size} pt"
+
+#: src/nightexpress/controllers/app_controller.py
+#, python-brace-format
+msgid "Розмір шрифту ({area}): {size} pt"
+msgstr "Font size ({area}): {size} pt"
+
+#: src/nightexpress/controllers/board_controller.py
+#: src/nightexpress/controllers/peripheral_controller.py
+msgid "Спершу дочекайтеся кінця збірки чи прошивання або зупиніть їх"
+msgstr "Wait for the build or flashing to finish, or stop it first"
+
+#: src/nightexpress/controllers/board_controller.py
+msgid "Іншої плати немає"
+msgstr "No other board"
+
+#: src/nightexpress/controllers/board_controller.py
+msgid "У каталозі поки що лише плата цього проєкту — змінювати нема на що."
+msgstr "The catalog only has this project's board so far — there is nothing to change to."
+
+#: src/nightexpress/controllers/board_controller.py
+#, python-brace-format
+msgid "Проєкт «{name}» буде перенесено на вибрану плату. Перед зміною покажу, що саме буде переписано."
+msgstr ""
+"Project “{name}” will be moved to the board you choose. Before changing anything I will show what"
+" gets rewritten."
+
+#: src/nightexpress/controllers/board_controller.py
+msgid "Це вже плата проєкту"
+msgstr "This is already the project's board"
+
+#: src/nightexpress/controllers/board_controller.py
+msgid "Не вдалося змінити плату"
+msgstr "Could not change the board"
+
+#: src/nightexpress/controllers/board_controller.py
+msgid "Змінити плату"
+msgstr "Change board"
+
+#: src/nightexpress/controllers/board_controller.py
+#, python-brace-format
+msgid "Перенести проєкт «{name}» на плату «{board}»?"
+msgstr "Move project “{name}” to the board “{board}”?"
+
+#: src/nightexpress/controllers/board_controller.py
+#, python-brace-format
+msgid "Плату змінено: {board} ({chip})."
+msgstr "Board changed: {board} ({chip})."
+
+#: src/nightexpress/controllers/board_controller.py
+#, python-brace-format
+msgid "Створено {path}"
+msgstr "Created {path}"
+
+#: src/nightexpress/controllers/board_controller.py
+#, python-brace-format
+msgid "Оновлено {path}"
+msgstr "Updated {path}"
+
+#: src/nightexpress/controllers/board_controller.py
+#, python-brace-format
+msgid "Увага: {note}"
+msgstr "Note: {note}"
+
+#: src/nightexpress/controllers/board_controller.py
+msgid "Перевірте в коді (застосунок його не змінював):"
+msgstr "Check in the code (the application did not change it):"
+
+#: src/nightexpress/controllers/board_controller.py
+msgid "Наступна збірка буде повною: залежності збираються заново під цей чип."
+msgstr "The next build will be a full one: dependencies are rebuilt for this chip."
+
+#: src/nightexpress/controllers/board_controller.py
+msgid "Плату змінено"
+msgstr "Board changed"
+
+#: src/nightexpress/controllers/board_controller.py
+#, python-brace-format
+msgid ""
+"{count} місце в коді з пінами попередньої плати — у «Проблемах». Вони зникнуть зі списку після "
+"наступної збірки."
+msgid_plural ""
+"{count} місць в коді з пінами попередньої плати — у «Проблемах». Вони зникнуть зі списку після "
+"наступної збірки."
+msgstr[0] ""
+"{count} place in the code uses pins of the previous board — see “Problems”. It will leave the "
+"list after the next build."
+msgstr[1] ""
+"{count} places in the code use pins of the previous board — see “Problems”. They will leave the "
+"list after the next build."
+
+#: src/nightexpress/controllers/board_controller.py
+msgid "Згадок пінів попередньої плати в коді не знайдено. Подробиці — у журналі збірки."
+msgstr "No mentions of the previous board's pins were found in the code. Details are in the build log."
+
+#: src/nightexpress/controllers/board_controller.py
+#, python-brace-format
+msgid "Буде переписано: {names}."
+msgstr "Will be rewritten: {names}."
+
+#: src/nightexpress/controllers/board_controller.py
+#, python-brace-format
+msgid ""
+"Код у src/ не змінюється: {count} місце з пінами попередньої плати треба поправити вручну — вони "
+"з'являться у «Проблемах»."
+msgid_plural ""
+"Код у src/ не змінюється: {count} місць з пінами попередньої плати треба поправити вручну — вони "
+"з'являться у «Проблемах»."
+msgstr[0] ""
+"The code in src/ is not changed: {count} place with pins of the previous board has to be fixed by"
+" hand — it will appear in “Problems”."
+msgstr[1] ""
+"The code in src/ is not changed: {count} places with pins of the previous board have to be fixed "
+"by hand — they will appear in “Problems”."
+
+#: src/nightexpress/controllers/board_controller.py
+msgid "Код у src/ не змінюється."
+msgstr "The code in src/ is not changed."
+
+#: src/nightexpress/controllers/board_controller.py
+msgid "Наступна збірка буде повною (кілька хвилин)."
+msgstr "The next build will be a full one (a few minutes)."
+
+#: src/nightexpress/controllers/build_controller.py
+#, python-brace-format
+msgid "Запуск збірки проєкту «{name}» ({profile}) для {board}…"
+msgstr "Building project “{name}” ({profile}) for {board}…"
+
+#: src/nightexpress/controllers/build_controller.py
+msgid ""
+"Перша збірка: rustup може завантажити toolchain і target, а cargo — залежності. Це займе кілька "
+"хвилин; наступні збірки — секунди."
+msgstr ""
+"First build: rustup may download the toolchain and the target, and cargo the dependencies. This "
+"takes a few minutes; later builds take seconds."
+
+#: src/nightexpress/controllers/build_controller.py
+msgid "Очищаю збірку (cargo clean)…"
+msgstr "Cleaning the build (cargo clean)…"
+
+#: src/nightexpress/controllers/build_controller.py src/nightexpress/controllers/upload_controller.py
+msgid "Зупиняю…"
+msgstr "Stopping…"
+
+#: src/nightexpress/controllers/build_controller.py
+#, python-brace-format
+msgid "{name} — файл поза проєктом, його не відкрито"
+msgstr "{name} is outside the project, so it was not opened"
+
+#: src/nightexpress/controllers/build_controller.py
+#, python-brace-format
+msgid "Файл {file} не знайдено"
+msgstr "File {file} not found"
+
+#: src/nightexpress/controllers/build_controller.py src/nightexpress/controllers/upload_controller.py
+msgid "Немає проєкту"
+msgstr "No project"
+
+#: src/nightexpress/controllers/build_controller.py src/nightexpress/controllers/upload_controller.py
+msgid "Спочатку створіть або відкрийте проєкт."
+msgstr "Create or open a project first."
+
+#: src/nightexpress/controllers/build_controller.py src/nightexpress/controllers/project_controller.py
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Невідома плата"
+msgstr "Unknown board"
+
+#: src/nightexpress/controllers/build_controller.py
+#, python-brace-format
+msgid "Плата «{board_id}» невідома цій версії NightExpress."
+msgstr "The board “{board_id}” is unknown to this version of NightExpress."
+
+#: src/nightexpress/controllers/build_controller.py
+msgid "Rust не знайдено"
+msgstr "Rust not found"
+
+#: src/nightexpress/controllers/build_controller.py
+#, python-brace-format
+msgid "Не знайдено cargo. {hint}"
+msgstr "cargo not found. {hint}"
+
+#: src/nightexpress/controllers/build_controller.py
+msgid "Очищення зупинено"
+msgstr "Cleaning stopped"
+
+#: src/nightexpress/controllers/build_controller.py
+msgid "Збірку зупинено"
+msgstr "Build stopped"
+
+#: src/nightexpress/controllers/build_controller.py
+#, python-brace-format
+msgid "Не вдалося запустити cargo: {error}"
+msgstr "Could not start cargo: {error}"
+
+#: src/nightexpress/controllers/build_controller.py
+msgid "Не вдалося запустити cargo"
+msgstr "Could not start cargo"
+
+#: src/nightexpress/controllers/build_controller.py
+msgid "Збірку очищено."
+msgstr "Build cleaned."
+
+#: src/nightexpress/controllers/build_controller.py
+msgid "cargo clean не вдався."
+msgstr "cargo clean failed."
+
+#: src/nightexpress/controllers/build_controller.py
+msgid "Збірку очищено"
+msgstr "Build cleaned"
+
+#: src/nightexpress/controllers/build_controller.py
+msgid "cargo clean не вдався"
+msgstr "cargo clean failed"
+
+#: src/nightexpress/controllers/build_controller.py
+#, python-brace-format
+msgid "Збірку успішно завершено ({seconds} с)"
+msgstr "Build finished successfully ({seconds} s)"
+
+#: src/nightexpress/controllers/build_controller.py
+#, python-brace-format
+msgid "Зібрано за {seconds} с"
+msgstr "Built in {seconds} s"
+
+#: src/nightexpress/controllers/build_controller.py
+msgid "Збірка не вдалася"
+msgstr "Build failed"
+
+#: src/nightexpress/controllers/build_controller.py
+#, python-brace-format
+msgid "Збірка не вдалася: {count} помилка"
+msgid_plural "Збірка не вдалася: {count} помилок"
+msgstr[0] "Build failed: {count} error"
+msgstr[1] "Build failed: {count} errors"
+
+#: src/nightexpress/controllers/build_controller.py
+#, python-brace-format
+msgid "Не вдалося визначити розмір програми: {error}"
+msgstr "Could not determine the program size: {error}"
+
+#: src/nightexpress/controllers/build_controller.py
+msgid "⚠ Пам'ять майже заповнена — прошивка може перестати влазити або стеку забракне місця."
+msgstr "⚠ Memory is almost full — the firmware may stop fitting, or the stack may run out of space."
+
+#: src/nightexpress/controllers/build_controller.py
+msgid "Очищаю збірку…"
+msgstr "Cleaning the build…"
+
+#: src/nightexpress/controllers/build_controller.py
+msgid "Збираю…"
+msgstr "Building…"
+
+#: src/nightexpress/controllers/language_controller.py src/nightexpress/controllers/theme_controller.py
+msgid "Як у системі"
+msgstr "Same as system"
+
+#: src/nightexpress/controllers/peripheral_controller.py
+#, python-brace-format
+msgid "Не вдалося додати {name}"
+msgstr "Could not add {name}"
+
+#: src/nightexpress/controllers/peripheral_controller.py
+#, python-brace-format
+msgid "{name} додано"
+msgstr "{name} added"
+
+#: src/nightexpress/controllers/peripheral_controller.py
+#, python-brace-format
+msgid ""
+"Підключіть модуль ({wiring}) і натисніть «Зібрати й прошити» через ST-Link: значення з'являться у"
+" вкладці RTT."
+msgstr ""
+"Wire the module ({wiring}) and press “Build and flash” with an ST-Link: the values appear in the "
+"RTT tab."
+
+#: src/nightexpress/controllers/peripheral_controller.py
+#, python-brace-format
+msgid "{name} додано, але код треба вставити вручну"
+msgstr "{name} added, but the code has to be pasted by hand"
+
+#: src/nightexpress/controllers/peripheral_controller.py
+msgid ""
+"У main.rs немає embassy_stm32::init або циклу loop, тож код налаштування й читання не вставлено. "
+"Скопіюйте його й вставте у main()."
+msgstr ""
+"main.rs has no embassy_stm32::init or no loop, so the set-up and reading code was not inserted. "
+"Copy it and paste it into main()."
+
+#: src/nightexpress/controllers/peripheral_controller.py
+msgid "Скопіювати код"
+msgstr "Copy the code"
+
+#: src/nightexpress/controllers/ports_controller.py
+#, python-brace-format
+msgid "Знайдено: {device}"
+msgstr "Found: {device}"
+
+#: src/nightexpress/controllers/ports_controller.py
+msgid "Використати цей пристрій для прошивання?"
+msgstr "Use this device for flashing?"
+
+#: src/nightexpress/controllers/ports_controller.py
+msgid "Використати"
+msgstr "Use"
+
+#: src/nightexpress/controllers/ports_controller.py
+#, python-brace-format
+msgid "Знайдено пристроїв: {count}"
+msgstr "Devices found: {count}"
+
+#: src/nightexpress/controllers/ports_controller.py
+msgid "Виберіть, через який прошивати плату."
+msgstr "Choose which one to flash the board with."
+
+#: src/nightexpress/controllers/ports_controller.py src/nightexpress/views/toolbar_view.py
+msgid "Вибрати пристрій"
+msgstr "Choose device"
+
+#: src/nightexpress/controllers/ports_controller.py
+msgid "Назва пристрою"
+msgstr "Device name"
+
+#: src/nightexpress/controllers/ports_controller.py
+msgid "Як називати цей пристрій:"
+msgstr "What to call this device:"
+
+#: src/nightexpress/controllers/project_controller.py
+msgid "Проєкт не знайдено"
+msgstr "Project not found"
+
+#: src/nightexpress/controllers/project_controller.py
+#, python-brace-format
+msgid "Теки {path} більше немає."
+msgstr "The folder {path} no longer exists."
+
+#: src/nightexpress/controllers/project_controller.py
+msgid "Не вдалося відкрити проєкт"
+msgstr "Could not open the project"
+
+#: src/nightexpress/controllers/project_controller.py
+#, python-brace-format
+msgid ""
+"{reason}\n"
+"\n"
+"Це запишеться в Cargo.toml у розділ [package.metadata.nightexpress]."
+msgstr ""
+"{reason}\n"
+"\n"
+"This will be written to Cargo.toml, section [package.metadata.nightexpress]."
+
+#: src/nightexpress/controllers/project_controller.py
+#, python-brace-format
+msgid ""
+"Плата «{board_id}» з Cargo.toml невідома цій версії NightExpress. Редагувати код можна, але "
+"зібрати й прошити — ні."
+msgstr ""
+"The board “{board_id}” from Cargo.toml is unknown to this version of NightExpress. You can edit "
+"the code, but not build or flash it."
+
+#: src/nightexpress/controllers/project_controller.py
+msgid "Шлях відносно теки проєкту:"
+msgstr "Path relative to the project folder:"
+
+#: src/nightexpress/controllers/project_controller.py
+msgid "Назва має вказувати на місце всередині теки проєкту."
+msgstr "The name must point to a place inside the project folder."
+
+#: src/nightexpress/controllers/project_controller.py src/nightexpress/services/file_service.py
+#, python-brace-format
+msgid "{name} уже існує."
+msgstr "{name} already exists."
+
+#: src/nightexpress/controllers/project_controller.py src/nightexpress/views/main_window.py
+msgid "Новий файл"
+msgstr "New file"
+
+#: src/nightexpress/controllers/project_controller.py
+msgid "Нова тека"
+msgstr "New folder"
+
+#: src/nightexpress/controllers/project_controller.py
+msgid "Не вдалося перейменувати"
+msgstr "Could not rename"
+
+#: src/nightexpress/controllers/project_controller.py
+msgid "Його можна буде відновити з кошика."
+msgstr "It can be restored from the trash."
+
+#: src/nightexpress/controllers/project_controller.py
+msgid "Її з усім вмістом можна буде відновити з кошика."
+msgstr "It can be restored from the trash with everything in it."
+
+#: src/nightexpress/controllers/project_controller.py
+msgid " Незбережені зміни буде втрачено."
+msgstr " Unsaved changes will be lost."
+
+#: src/nightexpress/controllers/project_controller.py
+msgid "Видалення"
+msgstr "Delete"
+
+#: src/nightexpress/controllers/project_controller.py
+#, python-brace-format
+msgid "Видалити теку «{path}»?"
+msgstr "Delete the folder “{path}”?"
+
+#: src/nightexpress/controllers/project_controller.py
+#, python-brace-format
+msgid "Видалити файл «{path}»?"
+msgstr "Delete the file “{path}”?"
+
+#: src/nightexpress/controllers/project_controller.py src/nightexpress/views/file_tree_view.py
+msgid "Видалити"
+msgstr "Delete"
+
+#: src/nightexpress/controllers/project_controller.py
+msgid "Не вдалося видалити"
+msgstr "Could not delete"
+
+#: src/nightexpress/controllers/project_controller.py
+msgid "Не вдалося відкрити файл"
+msgstr "Could not open the file"
+
+#: src/nightexpress/controllers/project_controller.py
+msgid "Форматування — лише для файлів .rs"
+msgstr "Formatting is for .rs files only"
+
+#: src/nightexpress/controllers/project_controller.py src/nightexpress/services/rustfmt.py
+msgid "Не знайдено rustfmt. Встановіть: rustup component add rustfmt"
+msgstr "rustfmt not found. Install it: rustup component add rustfmt"
+
+#: src/nightexpress/controllers/project_controller.py
+msgid "Форматування"
+msgstr "Formatting"
+
+#: src/nightexpress/controllers/project_controller.py
+msgid "Не вдалося зберегти"
+msgstr "Could not save"
+
+#: src/nightexpress/controllers/project_controller.py
+msgid "Є незбережені зміни — збирається версія з диска"
+msgstr "There are unsaved changes — the version on disk is being built"
+
+#: src/nightexpress/controllers/project_controller.py
+#, python-brace-format
+msgid "{name} оновлено з диска"
+msgstr "{name} reloaded from disk"
+
+#: src/nightexpress/controllers/project_controller.py
+msgid "Файл змінено на диску"
+msgstr "File changed on disk"
+
+#: src/nightexpress/controllers/project_controller.py
+#, python-brace-format
+msgid "{path} змінила інша програма, а тут є незбережені зміни. Збереження замінить версію з диска."
+msgstr ""
+"{path} was changed by another program, and there are unsaved changes here. Saving will replace "
+"the version on disk."
+
+#: src/nightexpress/controllers/project_controller.py
+msgid "Перечитати з диска"
+msgstr "Reload from disk"
+
+#: src/nightexpress/controllers/rtt_controller.py
+msgid "Програма не пише в RTT. Додайте до проєкту defmt і defmt-rtt — як у прикладі «RTT Hello»."
+msgstr ""
+"The program does not write to RTT. Add defmt and defmt-rtt to the project, as in the “RTT Hello” "
+"example."
+
+#: src/nightexpress/controllers/rtt_controller.py
+#, python-brace-format
+msgid "Підключаюся до {chip} через {probe}…"
+msgstr "Connecting to {chip} through {probe}…"
+
+#: src/nightexpress/controllers/rtt_controller.py
+#, python-brace-format
+msgid "Підключено: {chip} через {probe}"
+msgstr "Connected: {chip} through {probe}"
+
+#: src/nightexpress/controllers/rtt_controller.py
+#: src/nightexpress/controllers/serial_monitor_controller.py
+msgid "Відключено"
+msgstr "Disconnected"
+
+#: src/nightexpress/controllers/rtt_controller.py
+#, python-brace-format
+msgid "RTT відключено: {reason}"
+msgstr "RTT disconnected: {reason}"
+
+#: src/nightexpress/controllers/serial_monitor_controller.py
+msgid "Виберіть USB-TTL адаптер у списку ліворуч."
+msgstr "Choose a USB-TTL adapter in the list on the left."
+
+#: src/nightexpress/controllers/serial_monitor_controller.py
+#, python-brace-format
+msgid "Не вдалося відкрити {label}: {error}"
+msgstr "Could not open {label}: {error}"
+
+#: src/nightexpress/controllers/serial_monitor_controller.py
+#, python-brace-format
+msgid "Підключено: {label}, {baud_rate} 8N1"
+msgstr "Connected: {label}, {baud_rate} 8N1"
+
+#: src/nightexpress/controllers/serial_monitor_controller.py
+msgid "Зберегти вивід UART"
+msgstr "Save UART output"
+
+#: src/nightexpress/controllers/serial_monitor_controller.py
+msgid "Журнал (*.log *.txt)"
+msgstr "Log (*.log *.txt)"
+
+#: src/nightexpress/controllers/serial_monitor_controller.py
+#, python-brace-format
+msgid "Вивід UART збережено: {name}"
+msgstr "UART output saved: {name}"
+
+#: src/nightexpress/controllers/serial_monitor_controller.py
+#, python-brace-format
+msgid "Не вдалося надіслати: {error}"
+msgstr "Could not send: {error}"
+
+#: src/nightexpress/controllers/serial_monitor_controller.py
+#, python-brace-format
+msgid "Адаптер відключено ({reason})"
+msgstr "Adapter disconnected ({reason})"
+
+#: src/nightexpress/controllers/serial_monitor_controller.py
+msgid "Порт звільнено на час прошивки…"
+msgstr "The port is released while flashing…"
+
+#: src/nightexpress/controllers/serial_monitor_controller.py
+msgid "порт звільнено на час прошивання"
+msgstr "port released while flashing"
+
+#: src/nightexpress/controllers/serial_monitor_controller.py
+msgid "перепідключено після прошивання"
+msgstr "reconnected after flashing"
+
+#: src/nightexpress/controllers/terminal_controller.py
+#, python-brace-format
+msgid "Процес завершено (код {code}). Натисніть Enter, щоб запустити термінал знову."
+msgstr "Process finished (code {code}). Press Enter to start the terminal again."
+
+#: src/nightexpress/controllers/toolchain_controller.py
+msgid "Rust: перевірка не вдалася"
+msgstr "Rust: check failed"
+
+#: src/nightexpress/controllers/toolchain_controller.py
+#, python-brace-format
+msgid "Rust: не знайдено {missing}"
+msgstr "Rust: {missing} not found"
+
+#: src/nightexpress/controllers/toolchain_controller.py
+#, python-brace-format
+msgid "Rust: не працює {broken}"
+msgstr "Rust: {broken} does not work"
+
+#: src/nightexpress/controllers/toolchain_controller.py
+msgid "Rust: готовий"
+msgstr "Rust: ready"
+
+#: src/nightexpress/controllers/toolchain_controller.py
+msgid "Команду скопійовано"
+msgstr "Command copied"
+
+#: src/nightexpress/controllers/toolchain_controller.py src/nightexpress/views/main_window.py
+msgid "Rust: перевірка…"
+msgstr "Rust: checking…"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Прошивання не вдалося: ST-Link не знайдено"
+msgstr "Flashing failed: ST-Link not found"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Прошивання не вдалося: ST-Link зайнятий"
+msgstr "Flashing failed: ST-Link is busy"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Прошивання не вдалося: чип не відповідає"
+msgstr "Flashing failed: the chip does not respond"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Прошивання не вдалося: probe-rs не знає чипа"
+msgstr "Flashing failed: probe-rs does not know the chip"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Прошивання не вдалося: перевірка не пройшла"
+msgstr "Flashing failed: verification failed"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Прошивання скасовано: підключено інший чип"
+msgstr "Flashing cancelled: a different chip is connected"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Прошивання не вдалося: probe-rs не встановлено"
+msgstr "Flashing failed: probe-rs is not installed"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Прошивання зупинено"
+msgstr "Flashing stopped"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Прошивання не вдалося: probe-rs не відповідає"
+msgstr "Flashing failed: probe-rs does not respond"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Прошивання не вдалося"
+msgstr "Flashing failed"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Прошивання не вдалося: порт недоступний"
+msgstr "Flashing failed: the port is unavailable"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Прошивання не вдалося: бутлоадер не відповідає"
+msgstr "Flashing failed: the bootloader does not respond"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Прошивання не вдалося: бутлоадер відхилив команду"
+msgstr "Flashing failed: the bootloader rejected a command"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Прошивання не вдалося: flash захищена"
+msgstr "Flashing failed: flash is protected"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Прошивання скасовано: прошивка завелика"
+msgstr "Flashing cancelled: the firmware is too large"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Прошивання не вдалося: dfu-util не встановлено"
+msgstr "Flashing failed: dfu-util is not installed"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Прошивання не вдалося: плату в режимі DFU не знайдено"
+msgstr "Flashing failed: no board in DFU mode found"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Прошивання не вдалося: немає доступу до USB"
+msgstr "Flashing failed: no access to USB"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Прошивання не вдалося: dfu-util не відповідає"
+msgstr "Flashing failed: dfu-util does not respond"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Чекаю на бутлоадер…"
+msgstr "Waiting for the bootloader…"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Підключаюся до бутлоадера…"
+msgstr "Connecting to the bootloader…"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Перевіряю чип…"
+msgstr "Checking the chip…"
+
+#: src/nightexpress/controllers/upload_controller.py src/nightexpress/services/serial_bootloader.py
+msgid "Стираю flash…"
+msgstr "Erasing flash…"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Записую"
+msgstr "Writing"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Перевіряю записане"
+msgstr "Verifying"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Запускаю програму…"
+msgstr "Starting the program…"
+
+#: src/nightexpress/controllers/upload_controller.py
+#, python-brace-format
+msgid "Плата «{board_id}» невідома."
+msgstr "The board “{board_id}” is unknown."
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Виберіть пристрій для прошивання"
+msgstr "Choose a device for flashing"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Пристрій не знайдено"
+msgstr "Device not found"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid ""
+"Підключіть ST-Link або плату через USB у режимі DFU: затисніть BOOT0, натисніть і відпустіть "
+"Reset, відпустіть BOOT0."
+msgstr ""
+"Connect an ST-Link, or the board over USB in DFU mode: hold BOOT0, press and release Reset, "
+"release BOOT0."
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Як прошити через USB"
+msgstr "How to flash over USB"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid ""
+"Підключіть ST-Link (або USB-TTL адаптер) до комп'ютера й плати — він з'явиться в меню «Вибрати "
+"пристрій»."
+msgstr ""
+"Connect an ST-Link (or a USB-TTL adapter) to the computer and the board — it will appear in the "
+"“Choose device” menu."
+
+#: src/nightexpress/controllers/upload_controller.py
+#, python-brace-format
+msgid "Плата «{board}» не підтримує прошивку через USB DFU."
+msgstr "The board “{board}” does not support flashing over USB DFU."
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "dfu-util не знайдено"
+msgstr "dfu-util not found"
+
+#: src/nightexpress/controllers/upload_controller.py
+#, python-brace-format
+msgid "Плата «{board}» не підтримує прошивку через UART."
+msgstr "The board “{board}” does not support flashing over UART."
+
+#: src/nightexpress/controllers/upload_controller.py
+#, python-brace-format
+msgid "Плата «{board}» не підтримує SWD."
+msgstr "The board “{board}” does not support SWD."
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "probe-rs не знайдено"
+msgstr "probe-rs not found"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Без dfu-util плату в режимі DFU не видно. Встановіть його або підключіть ST-Link."
+msgstr "Without dfu-util a board in DFU mode cannot be seen. Install it or connect an ST-Link."
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Встановіть dfu-util"
+msgstr "Install dfu-util"
+
+#: src/nightexpress/controllers/upload_controller.py src/nightexpress/views/dialogs/toolchain_dialog.py
+msgid "Скопіювати команду"
+msgstr "Copy the command"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid ""
+"Збірка не створила виконуваного файлу: у проєкті немає програми (src/main.rs або [[bin]]), тож "
+"прошивати нічого."
+msgstr ""
+"The build produced no executable: the project has no program (src/main.rs or [[bin]]), so there "
+"is nothing to flash."
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Прошивання скасовано: немає виконуваного файлу"
+msgstr "Flashing cancelled: no executable"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Збірка не вдалася — прошивання скасовано. Див. «Проблеми»."
+msgstr "Build failed — flashing cancelled. See “Problems”."
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Прошивання скасовано: помилка збірки"
+msgstr "Flashing cancelled: build error"
+
+#: src/nightexpress/controllers/upload_controller.py
+#, python-brace-format
+msgid "Програматор: {name} ({selector})"
+msgstr "Probe: {name} ({selector})"
+
+#: src/nightexpress/controllers/upload_controller.py
+#, python-brace-format
+msgid "Перевіряю чип {chip} (DBGMCU_IDCODE)…"
+msgstr "Checking the chip {chip} (DBGMCU_IDCODE)…"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "нічого (0)"
+msgstr "nothing (0)"
+
+#: src/nightexpress/controllers/upload_controller.py
+#, python-brace-format
+msgid ""
+"Проєкт зібрано для {chip} (DEV_ID 0x{dev_id:03X}), а підключено: {found}. Перевірте плату або "
+"виберіть іншу плату для проєкту."
+msgstr ""
+"The project was built for {chip} (DEV_ID 0x{dev_id:03X}), but the connected chip is: {found}. "
+"Check the board or choose another board for the project."
+
+#: src/nightexpress/controllers/upload_controller.py
+#, python-brace-format
+msgid "Чип: {chip}, IDCODE 0x{idcode:08X} ✓"
+msgstr "Chip: {chip}, IDCODE 0x{idcode:08X} ✓"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Прошиваю й перевіряю записане (probe-rs download --verify)…"
+msgstr "Flashing and verifying (probe-rs download --verify)…"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Плату перезапущено — програма працює."
+msgstr "The board was reset — the program is running."
+
+#: src/nightexpress/controllers/upload_controller.py
+#, python-brace-format
+msgid "Прошивку завершено й перевірено ({seconds} с)"
+msgstr "Flashing finished and verified ({seconds} s)"
+
+#: src/nightexpress/controllers/upload_controller.py
+#, python-brace-format
+msgid "Не вдалося підготувати образ: {error}"
+msgstr "Could not prepare the image: {error}"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Прошивання скасовано"
+msgstr "Flashing cancelled"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Монітор UART тимчасово відключено від цього порту."
+msgstr "The UART monitor is temporarily disconnected from this port."
+
+#: src/nightexpress/controllers/upload_controller.py
+#, python-brace-format
+msgid "Порт: {port_text} (UART-бутлоадер, 115200 8E1)"
+msgstr "Port: {port_text} (UART bootloader, 115200 8E1)"
+
+#: src/nightexpress/controllers/upload_controller.py
+#, python-brace-format
+msgid "Образ: {count} байт з адреси 0x{address:08X}"
+msgstr "Image: {count} bytes from address 0x{address:08X}"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid ""
+"Щоб запустити програму, поверніть BOOT0 = 0 і натисніть Reset. Поки BOOT0 = 1, плата після Reset "
+"вмикає бутлоадер, а не програму."
+msgstr ""
+"To start the program, set BOOT0 = 0 again and press Reset. While BOOT0 = 1, the board starts the "
+"bootloader after Reset, not the program."
+
+#: src/nightexpress/controllers/upload_controller.py
+#, python-brace-format
+msgid "Пристрій: {device} {serial}"
+msgstr "Device: {device} {serial}"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Записане збігається з прошивкою ✓"
+msgstr "What was written matches the firmware ✓"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Плата вийшла з бутлоадера — програма працює."
+msgstr "The board left the bootloader — the program is running."
+
+#: src/nightexpress/controllers/upload_controller.py
+#, python-brace-format
+msgid "Прошито за {seconds} с"
+msgstr "Flashed in {seconds} s"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "о %H:%M"
+msgstr "at %H:%M"
+
+#: src/nightexpress/controllers/upload_controller.py
+msgid "Прошиваю…"
+msgstr "Flashing…"
+
+#: src/nightexpress/models/entities/project.py
+msgid "Введіть назву проєкту."
+msgstr "Enter a project name."
+
+#: src/nightexpress/models/entities/project.py
+#, python-brace-format
+msgid "Назва задовга (максимум {limit} символи)."
+msgstr "The name is too long (at most {limit} characters)."
+
+#: src/nightexpress/models/entities/project.py
+msgid "Назва має починатися з латинської літери й містити лише латинські літери, цифри, «_» або «-»."
+msgstr "The name must start with a Latin letter and contain only Latin letters, digits, “_” or “-”."
+
+#: src/nightexpress/models/entities/project.py
+#, python-brace-format
+msgid "«{name}» — зарезервоване слово Rust/Cargo, виберіть іншу назву."
+msgstr "“{name}” is a reserved Rust/Cargo word, choose another name."
+
+#: src/nightexpress/models/qt_models/diagnostics_tree_model.py
+msgid "помилка"
+msgstr "error"
+
+#: src/nightexpress/models/qt_models/diagnostics_tree_model.py
+msgid "попередження"
+msgstr "warning"
+
+#: src/nightexpress/models/qt_models/diagnostics_tree_model.py
+msgid "примітка"
+msgstr "note"
+
+#: src/nightexpress/models/qt_models/diagnostics_tree_model.py
+msgid "порада"
+msgstr "help"
+
+#: src/nightexpress/models/qt_models/diagnostics_tree_model.py
+msgid "Повідомлення"
+msgstr "Message"
+
+#: src/nightexpress/models/qt_models/diagnostics_tree_model.py
+msgid "Код"
+msgstr "Code"
+
+#: src/nightexpress/models/qt_models/diagnostics_tree_model.py
+msgid "Рядок"
+msgstr "Line"
+
+#: src/nightexpress/models/qt_models/diagnostics_tree_model.py
+msgid "Проєкт загалом"
+msgstr "Whole project"
+
+#: src/nightexpress/models/qt_models/diagnostics_tree_model.py
+#, python-brace-format
+msgid ""
+"{message}\n"
+"порада: {hint}"
+msgstr ""
+"{message}\n"
+"help: {hint}"
+
+#: src/nightexpress/models/qt_models/diagnostics_tree_model.py
+msgid "Відкрити пояснення в браузері"
+msgstr "Open the explanation in the browser"
+
+#: src/nightexpress/services/board_migration.py
+msgid "Попередня плата невідома: піни в коді перевірте самостійно."
+msgstr "The previous board is unknown: check the pins in the code yourself."
+
+#: src/nightexpress/services/board_migration.py
+#, python-brace-format
+msgid ""
+"У Cargo.toml немає залежності {crate} зі списком features: чип ({feature}) у залежностях вкажіть "
+"самостійно."
+msgstr ""
+"Cargo.toml has no {crate} dependency with a list of features: set the chip ({feature}) in the "
+"dependencies yourself."
+
+#: src/nightexpress/services/board_migration.py
+#, python-brace-format
+msgid "Не вдалося змінити плату: {error}"
+msgstr "Could not change the board: {error}"
+
+#: src/nightexpress/services/board_migration.py
+#, python-brace-format
+msgid "{name} містить помилку: {error}"
+msgstr "{name} contains an error: {error}"
+
+#: src/nightexpress/services/board_migration.py
+msgid "світлодіод"
+msgstr "LED"
+
+#: src/nightexpress/services/board_migration.py
+msgid "світлодіода"
+msgstr "LED"
+
+#: src/nightexpress/services/board_migration.py
+msgid "кнопка"
+msgstr "button"
+
+#: src/nightexpress/services/board_migration.py
+msgid "кнопки"
+msgstr "button"
+
+#: src/nightexpress/services/board_migration.py
+#, python-brace-format
+msgid "на платі «{board}» це {new_name}"
+msgstr "on the board “{board}” it is {new_name}"
+
+#: src/nightexpress/services/board_migration.py
+#, python-brace-format
+msgid "на платі «{board}» {genitive} немає"
+msgstr "the board “{board}” has no {genitive}"
+
+#: src/nightexpress/services/board_migration.py
+#, python-brace-format
+msgid "{old_name} — {role} попередньої плати; {advice}"
+msgstr "{old_name} is the {role} of the previous board; {advice}"
+
+#: src/nightexpress/services/board_migration.py
+#, python-brace-format
+msgid ""
+"Інше сімейство чипа ({old_family} → {new_family}): назви периферії та її налаштування в {crate} "
+"можуть відрізнятися."
+msgstr ""
+"A different chip family ({old_family} → {new_family}): peripheral names and their settings in "
+"{crate} may differ."
+
+#: src/nightexpress/services/board_migration.py
+#, python-brace-format
+msgid ""
+"Інша частота ядра після старту ({old_mhz} → {new_mhz} МГц): затримки, пораховані в циклах, "
+"триватимуть інакше."
+msgstr ""
+"A different core clock after start-up ({old_mhz} → {new_mhz} MHz): delays counted in cycles will "
+"last differently."
+
+#: src/nightexpress/services/board_migration.py
+#, python-brace-format
+msgid "Світлодіод на {pin} тепер вмикається рівнем {level}."
+msgstr "The LED on {pin} is now turned on by a {level} level."
+
+#: src/nightexpress/services/board_migration.py
+#, python-brace-format
+msgid "У нового чипа менше пам'яті ({flash_kb} KB flash, {ram_kb} KB RAM): програма може не вміститися."
+msgstr "The new chip has less memory ({flash_kb} KB flash, {ram_kb} KB RAM): the program may not fit."
+
+#: src/nightexpress/services/dfu_util.py src/nightexpress/services/probe_rs.py
+#: src/nightexpress/services/serial_bootloader.py
+msgid "Прошивання зупинено."
+msgstr "Flashing stopped."
+
+#: src/nightexpress/services/dfu_util.py
+msgid "dfu-util не відповідає."
+msgstr "dfu-util does not respond."
+
+#: src/nightexpress/services/dfu_util.py
+msgid "Не вдалося запустити dfu-util."
+msgstr "Could not start dfu-util."
+
+#: src/nightexpress/services/dfu_util.py
+msgid ""
+"Плату в режимі DFU не знайдено. Затисніть BOOT0, натисніть і відпустіть Reset (NRST), потім "
+"відпустіть BOOT0."
+msgstr "No board in DFU mode found. Hold BOOT0, press and release Reset (NRST), then release BOOT0."
+
+#: src/nightexpress/services/dfu_util.py
+msgid ""
+"Немає доступу до USB-пристрою. Linux: додайте правило udev для 0483:df11; Windows: поставте "
+"драйвер WinUSB (Zadig)."
+msgstr ""
+"No access to the USB device. Linux: add a udev rule for 0483:df11; Windows: install the WinUSB "
+"driver (Zadig)."
+
+#: src/nightexpress/services/dfu_util.py
+msgid "dfu-util завершився з помилкою."
+msgstr "dfu-util ended with an error."
+
+#: src/nightexpress/services/dfu_util.py
+#, python-brace-format
+msgid "Записую {count} байт з адреси 0x{address:08X} (dfu-util)…"
+msgstr "Writing {count} bytes from address 0x{address:08X} (dfu-util)…"
+
+#: src/nightexpress/services/dfu_util.py
+msgid "Перевіряю записане й запускаю програму…"
+msgstr "Verifying what was written and starting the program…"
+
+#: src/nightexpress/services/dfu_util.py
+#, python-brace-format
+msgid "Записане не збігається з прошивкою (адреса 0x{address:08X})."
+msgstr "What was written does not match the firmware (address 0x{address:08X})."
+
+#: src/nightexpress/services/file_service.py
+#, python-brace-format
+msgid "{path} — це тека, а не файл."
+msgstr "{path} is a folder, not a file."
+
+#: src/nightexpress/services/file_service.py
+#, python-brace-format
+msgid "Файл {name} завеликий для редактора ({size_kb} KB)."
+msgstr "The file {name} is too large for the editor ({size_kb} KB)."
+
+#: src/nightexpress/services/file_service.py
+#, python-brace-format
+msgid "Файл {path} не знайдено."
+msgstr "File {path} not found."
+
+#: src/nightexpress/services/file_service.py
+#, python-brace-format
+msgid "Не вдалося прочитати {path}: {reason}"
+msgstr "Could not read {path}: {reason}"
+
+#: src/nightexpress/services/file_service.py
+#, python-brace-format
+msgid "Файл {name} не є текстом у кодуванні UTF-8 і не може бути відкритий."
+msgstr "The file {name} is not UTF-8 text and cannot be opened."
+
+#: src/nightexpress/services/file_service.py
+#, python-brace-format
+msgid "Не вдалося зберегти {path}: {error}"
+msgstr "Could not save {path}: {error}"
+
+#: src/nightexpress/services/file_service.py
+#, python-brace-format
+msgid "Не вдалося зберегти {path}: {reason}"
+msgstr "Could not save {path}: {reason}"
+
+#: src/nightexpress/services/file_service.py
+msgid "Назва не може бути порожньою."
+msgstr "The name cannot be empty."
+
+#: src/nightexpress/services/file_service.py
+#, python-brace-format
+msgid "Назва не може містити: {bad}"
+msgstr "The name cannot contain: {bad}"
+
+#: src/nightexpress/services/file_service.py
+#, python-brace-format
+msgid "Не вдалося створити теку {path}: {reason}"
+msgstr "Could not create the folder {path}: {reason}"
+
+#: src/nightexpress/services/file_service.py
+#, python-brace-format
+msgid "Не вдалося перейменувати {name}: {reason}"
+msgstr "Could not rename {name}: {reason}"
+
+#: src/nightexpress/services/file_service.py
+#, python-brace-format
+msgid "Не вдалося перемістити {name} у кошик."
+msgstr "Could not move {name} to the trash."
+
+#: src/nightexpress/services/peripherals.py
+#, python-brace-format
+msgid "На платі «{board}» не описано шину I2C."
+msgstr "The board “{board}” has no I2C bus described."
+
+#: src/nightexpress/services/peripherals.py
+#, python-brace-format
+msgid "{name} уже є в проєкті: {path}."
+msgstr "{name} is already in the project: {path}."
+
+#: src/nightexpress/services/peripherals.py
+#, python-brace-format
+msgid "{name} уже додано до проєкту."
+msgstr "{name} has already been added to the project."
+
+#: src/nightexpress/services/peripherals.py
+#, python-brace-format
+msgid ""
+"{bus} уже підключено до {scl}/{sda}. Виберіть ці виводи, щоб модуль став на ту саму шину, або "
+"іншу шину I2C."
+msgstr ""
+"{bus} is already wired to {scl}/{sda}. Choose those pins to put the module on the same bus, or "
+"another I2C bus."
+
+#: src/nightexpress/services/peripherals.py
+#, python-brace-format
+msgid "У main.rs уже використано {bus} або виводи {scl}/{sda}: модуль не можна підключити до них удруге."
+msgstr ""
+"main.rs already uses {bus} or the pins {scl}/{sda}: the module cannot be connected to them a "
+"second time."
+
+#: src/nightexpress/services/peripherals.py
+msgid "на початку циклу loop:"
+msgstr "at the start of the loop:"
+
+#: src/nightexpress/services/peripherals.py
+#, python-brace-format
+msgid "У проєкті немає файлу {path}."
+msgstr "The project has no file {path}."
+
+#: src/nightexpress/services/peripherals.py
+#, python-brace-format
+msgid "{path} містить помилку: {error}"
+msgstr "{path} contains an error: {error}"
+
+#: src/nightexpress/services/peripherals.py
+msgid "У .cargo/config.toml не вказано build.target."
+msgstr "build.target is not set in .cargo/config.toml."
+
+#: src/nightexpress/services/probe_rs.py
+msgid "ST-Link не знайдено. Перевірте USB-кабель і виберіть програматор у меню кнопки підключення."
+msgstr "ST-Link not found. Check the USB cable and choose the probe in the menu of the connection button."
+
+#: src/nightexpress/services/probe_rs.py
+msgid ""
+"ST-Link зайнятий іншою програмою (STM32CubeIDE, OpenOCD, інший probe-rs) або немає доступу до "
+"USB. Закрийте інші програми; на Linux додайте правила udev."
+msgstr ""
+"The ST-Link is used by another program (STM32CubeIDE, OpenOCD, another probe-rs) or there is no "
+"access to USB. Close the other programs; on Linux add the udev rules."
+
+#: src/nightexpress/services/probe_rs.py
+msgid ""
+"Чип не відповідає. Перевірте дроти SWDIO/SWCLK/GND, живлення плати й перемичку BOOT0 = 0. Якщо "
+"прошивка вимикає SWD, спробуйте ще раз, утримуючи Reset."
+msgstr ""
+"The chip does not respond. Check the SWDIO/SWCLK/GND wires, the board's power and the jumper "
+"BOOT0 = 0. If the firmware disables SWD, try again while holding Reset."
+
+#: src/nightexpress/services/probe_rs.py
+msgid "probe-rs не знає цього чипа: оновіть probe-rs."
+msgstr "probe-rs does not know this chip: update probe-rs."
+
+#: src/nightexpress/services/probe_rs.py
+msgid ""
+"Записане не збігається з прошивкою. Спробуйте ще раз; якщо повторюється — можливо, flash захищена"
+" від запису або чип пошкоджений."
+msgstr ""
+"What was written does not match the firmware. Try again; if it repeats, the flash may be write-"
+"protected or the chip damaged."
+
+#: src/nightexpress/services/probe_rs.py
+msgid "Підключено не той чип, для якого зібрано проєкт."
+msgstr "The connected chip is not the one the project was built for."
+
+#: src/nightexpress/services/probe_rs.py
+msgid "probe-rs не встановлено."
+msgstr "probe-rs is not installed."
+
+#: src/nightexpress/services/probe_rs.py
+msgid "probe-rs не відповідає занадто довго."
+msgstr "probe-rs has not responded for too long."
+
+#: src/nightexpress/services/probe_rs.py
+msgid "probe-rs повідомив про помилку — подробиці в журналі."
+msgstr "probe-rs reported an error — details are in the log."
+
+#: src/nightexpress/services/probe_rs.py
+#, python-brace-format
+msgid "невідомий чип (DEV_ID 0x{dev_id:03X})"
+msgstr "unknown chip (DEV_ID 0x{dev_id:03X})"
+
+#: src/nightexpress/services/project_config_repository.py
+#, python-brace-format
+msgid "У теці {path} немає Cargo.toml — це не Rust-проєкт."
+msgstr "The folder {path} has no Cargo.toml — it is not a Rust project."
+
+#: src/nightexpress/services/project_config_repository.py
+#, python-brace-format
+msgid "Cargo.toml містить помилку: {error}"
+msgstr "Cargo.toml contains an error: {error}"
+
+#: src/nightexpress/services/project_config_repository.py
+msgid "Cargo.toml не описує пакет ([package] з полем name). Workspace-проєкти поки не підтримуються."
+msgstr ""
+"Cargo.toml does not describe a package ([package] with a name field). Workspace projects are not "
+"supported yet."
+
+#: src/nightexpress/services/project_config_repository.py
+#, python-brace-format
+msgid "Проєкт «{name}» ще не налаштовано для NightExpress: виберіть плату."
+msgstr "Project “{name}” is not set up for NightExpress yet: choose a board."
+
+#: src/nightexpress/services/project_config_repository.py
+#, python-brace-format
+msgid "Проєкт «{name}» створено новішою версією NightExpress (schema {schema})."
+msgstr "Project “{name}” was created by a newer version of NightExpress (schema {schema})."
+
+#: src/nightexpress/services/project_config_repository.py
+#, python-brace-format
+msgid "У проєкті «{name}» не вказано плату."
+msgstr "Project “{name}” has no board specified."
+
+#: src/nightexpress/services/project_config_repository.py
+#, python-brace-format
+msgid "Невідомий спосіб прошивання «{method}» у Cargo.toml."
+msgstr "Unknown flashing method “{method}” in Cargo.toml."
+
+#: src/nightexpress/services/project_config_repository.py
+msgid "Cargo.toml не містить розділу [package]."
+msgstr "Cargo.toml has no [package] section."
+
+#: src/nightexpress/services/project_config_repository.py
+msgid "У Cargo.toml поле package.metadata має бути таблицею."
+msgstr "In Cargo.toml the package.metadata field must be a table."
+
+#: src/nightexpress/services/project_config_repository.py
+#, python-brace-format
+msgid "Не вдалося оновити Cargo.toml: {error}"
+msgstr "Could not update Cargo.toml: {error}"
+
+#: src/nightexpress/services/project_generator.py
+#, python-brace-format
+msgid "Небезпечний шлях у шаблоні: {relative}"
+msgstr "Unsafe path in the template: {relative}"
+
+#: src/nightexpress/services/project_generator.py
+#, python-brace-format
+msgid "Приклад «{title}» потребує світлодіода, а для плати «{board}» він не описаний."
+msgstr "The example “{title}” needs an LED, and the board “{board}” has none described."
+
+#: src/nightexpress/services/project_generator.py
+#, python-brace-format
+msgid "Приклад «{title}» потребує кнопки, а для плати «{board}» він не описаний."
+msgstr "The example “{title}” needs a button, and the board “{board}” has none described."
+
+#: src/nightexpress/services/project_generator.py
+#, python-brace-format
+msgid "Приклад «{title}» потребує UART, а для плати «{board}» він не описаний."
+msgstr "The example “{title}” needs a UART, and the board “{board}” has none described."
+
+#: src/nightexpress/services/project_generator.py
+#, python-brace-format
+msgid "Шаблон {name}: невідома вимога «{requirement}» у {file}."
+msgstr "Template {name}: unknown requirement “{requirement}” in {file}."
+
+#: src/nightexpress/services/project_generator.py
+#, python-brace-format
+msgid "Помилка в шаблоні {name}/{relative}: {error}"
+msgstr "Error in the template {name}/{relative}: {error}"
+
+#: src/nightexpress/services/project_generator.py
+#, python-brace-format
+msgid "Не вдалося створити проєкт: {error}"
+msgstr "Could not create the project: {error}"
+
+#: src/nightexpress/services/project_generator.py
+#, python-brace-format
+msgid "Тека {destination} уже існує й не порожня."
+msgstr "The folder {destination} already exists and is not empty."
+
+#: src/nightexpress/services/project_generator.py
+#, python-brace-format
+msgid "Невідомий шаблон «{name}»."
+msgstr "Unknown template “{name}”."
+
+#: src/nightexpress/services/pty_session.py
+#, python-brace-format
+msgid "Не знайдено оболонку «{program}»."
+msgstr "Shell “{program}” not found."
+
+#: src/nightexpress/services/pty_session.py
+#, python-brace-format
+msgid "Не вдається запустити оболонку «{program}»."
+msgstr "Cannot start the shell “{program}”."
+
+#: src/nightexpress/services/pty_session.py
+msgid "Для термінала у Windows потрібен пакет pywinpty."
+msgstr "The terminal on Windows needs the pywinpty package."
+
+#: src/nightexpress/services/pty_session.py
+#, python-brace-format
+msgid "Теки {path} немає."
+msgstr "The folder {path} does not exist."
+
+#: src/nightexpress/services/pty_session.py
+#, python-brace-format
+msgid "Не вдалося запустити термінал: {error}"
+msgstr "Could not start the terminal: {error}"
+
+#: src/nightexpress/services/rustfmt.py
+#, python-brace-format
+msgid "rustfmt не відповів за {seconds:g} с."
+msgstr "rustfmt did not respond within {seconds:g} s."
+
+#: src/nightexpress/services/rustfmt.py
+msgid "Для цього toolchain не встановлено rustfmt: rustup component add rustfmt"
+msgstr "rustfmt is not installed for this toolchain: rustup component add rustfmt"
+
+#: src/nightexpress/services/rustfmt.py
+msgid "невідома помилка"
+msgstr "unknown error"
+
+#: src/nightexpress/services/rustfmt.py
+#, python-brace-format
+msgid "Не вдалося відформатувати (рядок {line}): {error}"
+msgstr "Could not format (line {line}): {error}"
+
+#: src/nightexpress/services/rustfmt.py
+#, python-brace-format
+msgid "Не вдалося відформатувати: {error}"
+msgstr "Could not format: {error}"
+
+#: src/nightexpress/services/serial_bootloader.py
+msgid ""
+"Не вдалося відкрити порт: його зайняла інша програма (монітор порту, термінал) або адаптер "
+"відключено."
+msgstr ""
+"Could not open the port: another program (a port monitor, a terminal) is using it, or the adapter"
+" is disconnected."
+
+#: src/nightexpress/services/serial_bootloader.py
+msgid ""
+"Бутлоадер не відповідає. Перевірте: BOOT0 = 1 і натиснуто Reset; TX адаптера → RX бутлоадера, RX "
+"→ TX (на STM32F1 це PA10 і PA9); спільний GND; рівень 3.3 V."
+msgstr ""
+"The bootloader does not respond. Check: BOOT0 = 1 and Reset pressed; adapter TX → bootloader RX, "
+"RX → TX (on STM32F1 these are PA10 and PA9); common GND; 3.3 V logic."
+
+#: src/nightexpress/services/serial_bootloader.py
+msgid "Бутлоадер відхилив команду. Натисніть Reset і спробуйте ще раз."
+msgstr "The bootloader rejected a command. Press Reset and try again."
+
+#: src/nightexpress/services/serial_bootloader.py
+msgid ""
+"Flash захищена від читання/запису (Read-out protection). Зніміть захист через ST-Link або "
+"STM32CubeProgrammer — це зітре чип."
+msgstr ""
+"Flash is protected against reading/writing (Read-out protection). Remove the protection with an "
+"ST-Link or STM32CubeProgrammer — this erases the chip."
+
+#: src/nightexpress/services/serial_bootloader.py
+msgid "Відповів інший чип, ніж той, для якого зібрано проєкт."
+msgstr "A different chip answered than the one the project was built for."
+
+#: src/nightexpress/services/serial_bootloader.py
+msgid "Прошивка більша за flash цього чипа."
+msgstr "The firmware is larger than this chip's flash."
+
+#: src/nightexpress/services/serial_bootloader.py
+msgid "Записане не збігається з прошивкою. Спробуйте ще раз."
+msgstr "What was written does not match the firmware. Try again."
+
+#: src/nightexpress/services/serial_bootloader.py
+#, python-brace-format
+msgid "немає відповіді: {what}"
+msgstr "no response: {what}"
+
+#: src/nightexpress/services/serial_bootloader.py
+#, python-brace-format
+msgid "неочікувана відповідь 0x{reply:02X}: {what}"
+msgstr "unexpected response 0x{reply:02X}: {what}"
+
+#: src/nightexpress/services/serial_bootloader.py
+#, python-brace-format
+msgid "{name}: адреса 0x{address:08X}"
+msgstr "{name}: address 0x{address:08X}"
+
+#: src/nightexpress/services/serial_bootloader.py
+msgid "немає відповіді на 0x7F"
+msgstr "no response to 0x7F"
+
+#: src/nightexpress/services/serial_bootloader.py
+msgid "стирання flash"
+msgstr "erasing flash"
+
+#: src/nightexpress/services/serial_bootloader.py
+#, python-brace-format
+msgid "запис 0x{address:08X}"
+msgstr "writing 0x{address:08X}"
+
+#: src/nightexpress/services/serial_bootloader.py
+msgid "READ MEMORY: довжина"
+msgstr "READ MEMORY: length"
+
+#: src/nightexpress/services/serial_bootloader.py
+#, python-brace-format
+msgid "читання 0x{address:08X}"
+msgstr "reading 0x{address:08X}"
+
+#: src/nightexpress/services/serial_bootloader.py
+#, python-brace-format
+msgid "{count} байт > {flash_bytes} байт flash"
+msgstr "{count} bytes > {flash_bytes} bytes of flash"
+
+#: src/nightexpress/services/serial_bootloader.py
+#, python-brace-format
+msgid "Бутлоадер v{version}, команди: {commands}"
+msgstr "Bootloader v{version}, commands: {commands}"
+
+#: src/nightexpress/services/serial_bootloader.py
+#, python-brace-format
+msgid "PID чипа: 0x{pid:03X}"
+msgstr "Chip PID: 0x{pid:03X}"
+
+#: src/nightexpress/services/serial_bootloader.py
+#, python-brace-format
+msgid "очікувався PID 0x{expected_pid:03X}, отримано 0x{pid:03X}"
+msgstr "expected PID 0x{expected_pid:03X}, got 0x{pid:03X}"
+
+#: src/nightexpress/services/serial_bootloader.py
+#, python-brace-format
+msgid "Записую {count} байт ({blocks} блоків по {block_size})…"
+msgstr "Writing {count} bytes ({blocks} blocks of {block_size})…"
+
+#: src/nightexpress/services/serial_bootloader.py
+msgid "Перевіряю записане…"
+msgstr "Verifying…"
+
+#: src/nightexpress/services/serial_bootloader.py
+#, python-brace-format
+msgid "розбіжність у блоці з адреси 0x{address:08X}"
+msgstr "mismatch in the block at address 0x{address:08X}"
+
+#: src/nightexpress/services/serial_bootloader.py
+#, python-brace-format
+msgid "Запускаю програму з 0x{address:08X} (GO)…"
+msgstr "Starting the program at 0x{address:08X} (GO)…"
+
+#: src/nightexpress/services/serial_flash_service.py
+#, python-brace-format
+msgid "Внутрішня помилка: {error}"
+msgstr "Internal error: {error}"
+
+#: src/nightexpress/services/toolchain_probe.py
+#, python-brace-format
+msgid "Встановіть rust-analyzer: {command}"
+msgstr "Install rust-analyzer: {command}"
+
+#: src/nightexpress/services/toolchain_probe.py
+#, python-brace-format
+msgid "Для прошивки через USB DFU завантажте dfu-util з {url} і поставте драйвер WinUSB (Zadig)"
+msgstr "To flash over USB DFU, download dfu-util from {url} and install the WinUSB driver (Zadig)"
+
+#: src/nightexpress/services/toolchain_probe.py
+#, python-brace-format
+msgid "Для прошивки через USB DFU встановіть dfu-util: {command}"
+msgstr "To flash over USB DFU, install dfu-util: {command}"
+
+#: src/nightexpress/services/toolchain_probe.py
+#, python-brace-format
+msgid "Для ST-Link встановіть probe-rs: {command} і додайте правила udev ({url})"
+msgstr "For ST-Link install probe-rs: {command} and add the udev rules ({url})"
+
+#: src/nightexpress/services/toolchain_probe.py
+#, python-brace-format
+msgid "Для ST-Link встановіть probe-rs: {command}"
+msgstr "For ST-Link install probe-rs: {command}"
+
+#: src/nightexpress/services/toolchain_probe.py
+#, python-brace-format
+msgid "Встановіть Rust: завантажте rustup-init.exe з {url}"
+msgstr "Install Rust: download rustup-init.exe from {url}"
+
+#: src/nightexpress/services/toolchain_probe.py
+#, python-brace-format
+msgid "Встановіть Rust: {command}"
+msgstr "Install Rust: {command}"
+
+#: src/nightexpress/services/toolchain_probe.py
+#, python-brace-format
+msgid "{name} знайдено, але він не працює: {detail}"
+msgstr "{name} was found, but it does not work: {detail}"
+
+#: src/nightexpress/services/toolchain_probe.py
+#, python-brace-format
+msgid "{message}. Спробуйте: {command}"
+msgstr "{message}. Try: {command}"
+
+#: src/nightexpress/views/board_picker.py
+msgid "<i>Плата ще не перевірена на залізі.</i>"
+msgstr "<i>The board has not been verified on hardware yet.</i>"
+
+#: src/nightexpress/views/board_picker.py
+msgid "Пошук: назва плати або маркування чипа (STM32F103C6T6A)"
+msgstr "Search: board name or chip marking (STM32F103C6T6A)"
+
+#: src/nightexpress/views/board_picker.py
+msgid "Плату не знайдено. Перевірте маркування на чипі."
+msgstr "Board not found. Check the marking on the chip."
+
+#: src/nightexpress/views/dialogs/about_dialog.py
+msgid "Проста IDE для зручної роботи з Rust на STM32."
+msgstr "A simple IDE for comfortable work with Rust on STM32."
+
+#: src/nightexpress/views/dialogs/about_dialog.py
+msgid "© 2026 Vadym Voloshchuk. Поширюється за ліцензією MIT."
+msgstr "© 2026 Vadym Voloshchuk. Distributed under the MIT license."
+
+#: src/nightexpress/views/dialogs/about_dialog.py
+msgid ""
+"Код, який NightExpress створює з шаблонів для ваших проєктів, поширюється за ліцензією 0BSD: "
+"використовуйте його у своїх проєктах за будь-якою ліцензією, не зберігаючи наш копірайт."
+msgstr ""
+"The code NightExpress generates from templates for your projects is under the 0BSD license: use "
+"it in your own projects under any license, without keeping our copyright notice."
+
+#: src/nightexpress/views/dialogs/about_dialog.py
+msgid ""
+"Повні тексти ліцензій — у файлах LICENSE і THIRD-PARTY-NOTICES.md та поруч із вбудованими "
+"компонентами."
+msgstr ""
+"The full license texts are in the LICENSE and THIRD-PARTY-NOTICES.md files and next to the "
+"bundled components."
+
+#: src/nightexpress/views/dialogs/about_dialog.py
+msgid "Входять до складу програми"
+msgstr "Included in the application"
+
+#: src/nightexpress/views/dialogs/about_dialog.py
+msgid "The Qt Company Ltd. та інші; Qt WebEngine містить Chromium"
+msgstr "The Qt Company Ltd. and others; Qt WebEngine contains Chromium"
+
+#: src/nightexpress/views/dialogs/about_dialog.py
+msgid "Lucide (іконки)"
+msgstr "Lucide (icons)"
+
+#: src/nightexpress/views/dialogs/about_dialog.py
+msgid "Lucide Icons and Contributors; Cole Bemis (Feather, частина іконок — MIT)"
+msgstr "Lucide Icons and Contributors; Cole Bemis (Feather, some of the icons — MIT)"
+
+#: src/nightexpress/views/dialogs/about_dialog.py
+msgid "Логотип Rust із Simple Icons"
+msgstr "Rust logo from Simple Icons"
+
+#: src/nightexpress/views/dialogs/about_dialog.py
+msgid "торговельна марка Rust Foundation"
+msgstr "a trademark of the Rust Foundation"
+
+#: src/nightexpress/views/dialogs/about_dialog.py
+msgid "суспільне надбання"
+msgstr "public domain"
+
+#: src/nightexpress/views/dialogs/about_dialog.py
+msgid "pywinpty (лише Windows)"
+msgstr "pywinpty (Windows only)"
+
+#: src/nightexpress/views/dialogs/about_dialog.py
+msgid "Викликаються окремо, до складу не входять"
+msgstr "Run separately, not included"
+
+#: src/nightexpress/views/dialogs/about_dialog.py
+msgid "embassy-stm32, cortex-m та інші крейти"
+msgstr "embassy-stm32, cortex-m and other crates"
+
+#: src/nightexpress/views/dialogs/about_dialog.py
+msgid "автори крейтів, які завантажує Cargo для ваших проєктів"
+msgstr "the authors of the crates Cargo downloads for your projects"
+
+#: src/nightexpress/views/dialogs/about_dialog.py
+msgid ""
+"Qt використовується як окрема бібліотека з динамічним підключенням, без змін, за умовами "
+"LGPL-3.0. Вихідний код Qt: <a href=\"https://code.qt.io\">code.qt.io</a>, текст ліцензії: <a "
+"href=\"https://www.gnu.org/licenses/lgpl-3.0.html\">gnu.org/licenses/lgpl-3.0</a>."
+msgstr ""
+"Qt is used as a separate, dynamically linked library, unmodified, under the terms of LGPL-3.0. Qt"
+" source code: <a href=\"https://code.qt.io\">code.qt.io</a>, license text: <a "
+"href=\"https://www.gnu.org/licenses/lgpl-3.0.html\">gnu.org/licenses/lgpl-3.0</a>."
+
+#: src/nightexpress/views/dialogs/about_dialog.py
+msgid ""
+"NightExpress — незалежний проєкт. Він не пов'язаний зі STMicroelectronics, Rust Foundation, "
+"Microsoft чи The Qt Company і не схвалений ними. STM32 і ST-LINK — торговельні марки "
+"STMicroelectronics; Rust, Cargo і логотип Rust — торговельні марки Rust Foundation; Qt — "
+"торговельна марка The Qt Company Ltd. Інші назви належать їхнім власникам."
+msgstr ""
+"NightExpress is an independent project. It is not affiliated with or endorsed by "
+"STMicroelectronics, the Rust Foundation, Microsoft or The Qt Company. STM32 and ST-LINK are "
+"trademarks of STMicroelectronics; Rust, Cargo and the Rust logo are trademarks of the Rust "
+"Foundation; Qt is a trademark of The Qt Company Ltd. Other names belong to their owners."
+
+#: src/nightexpress/views/dialogs/about_dialog.py
+#, python-brace-format
+msgid "Версія {version}"
+msgstr "Version {version}"
+
+#: src/nightexpress/views/dialogs/about_dialog.py
+msgid "Ліцензії й торговельні марки"
+msgstr "Licenses and trademarks"
+
+#: src/nightexpress/views/dialogs/board_chooser.py
+msgid "Виберіть плату"
+msgstr "Choose a board"
+
+#: src/nightexpress/views/dialogs/board_chooser.py
+msgid "Вибрати"
+msgstr "Choose"
+
+#: src/nightexpress/views/dialogs/boot_mode_dialog.py
+msgid "Режим бутлоадера"
+msgstr "Bootloader mode"
+
+#: src/nightexpress/views/dialogs/boot_mode_dialog.py
+msgid "Переведіть плату в режим бутлоадера"
+msgstr "Put the board into bootloader mode"
+
+#: src/nightexpress/views/dialogs/boot_mode_dialog.py
+#, python-brace-format
+msgid "Прошивка піде через порт: {port}"
+msgstr "The firmware will go through the port: {port}"
+
+#: src/nightexpress/views/dialogs/boot_mode_dialog.py
+msgid "Поставте перемичку <b>BOOT0 = 1</b> (BOOT1 = 0)."
+msgstr "Set the jumper <b>BOOT0 = 1</b> (BOOT1 = 0)."
+
+#: src/nightexpress/views/dialogs/boot_mode_dialog.py
+msgid "Натисніть кнопку <b>Reset</b> на платі."
+msgstr "Press the <b>Reset</b> button on the board."
+
+#: src/nightexpress/views/dialogs/boot_mode_dialog.py
+msgid "Натисніть «Прошити»."
+msgstr "Press “Flash”."
+
+#: src/nightexpress/views/dialogs/boot_mode_dialog.py
+#, python-brace-format
+msgid ""
+"Підключення: TX адаптера → {rx_pin}, RX адаптера → {tx_pin}, спільний GND, логіка 3.3 V. Після "
+"прошивки поверніть BOOT0 = 0 і натисніть Reset — тоді запуститься програма."
+msgstr ""
+"Wiring: adapter TX → {rx_pin}, adapter RX → {tx_pin}, common GND, 3.3 V logic. After flashing set"
+" BOOT0 = 0 again and press Reset — then the program starts."
+
+#: src/nightexpress/views/dialogs/boot_mode_dialog.py
+msgid "Більше не показувати цю підказку"
+msgstr "Do not show this hint again"
+
+#: src/nightexpress/views/dialogs/boot_mode_dialog.py
+msgid "Прошити"
+msgstr "Flash"
+
+#: src/nightexpress/views/dialogs/new_project_wizard.py
+msgid "Огляд…"
+msgstr "Browse…"
+
+#: src/nightexpress/views/dialogs/new_project_wizard.py
+msgid "Проєкт — це звичайний Cargo-проєкт у новій теці."
+msgstr "A project is an ordinary Cargo project in a new folder."
+
+#: src/nightexpress/views/dialogs/new_project_wizard.py
+msgid "Назва й розташування"
+msgstr "Name and location"
+
+#: src/nightexpress/views/dialogs/new_project_wizard.py
+msgid "Назва:"
+msgstr "Name:"
+
+#: src/nightexpress/views/dialogs/new_project_wizard.py
+msgid "Тека:"
+msgstr "Folder:"
+
+#: src/nightexpress/views/dialogs/new_project_wizard.py
+msgid "Тека для проєктів"
+msgstr "Folder for projects"
+
+#: src/nightexpress/views/dialogs/new_project_wizard.py
+msgid "Виберіть теку."
+msgstr "Choose a folder."
+
+#: src/nightexpress/views/dialogs/new_project_wizard.py
+#, python-brace-format
+msgid "Теку {path} не знайдено."
+msgstr "Folder {path} not found."
+
+#: src/nightexpress/views/dialogs/new_project_wizard.py
+#, python-brace-format
+msgid "Тека {path} недоступна."
+msgstr "The folder {path} is not accessible."
+
+#: src/nightexpress/views/dialogs/new_project_wizard.py
+#, python-brace-format
+msgid "Тека {path} уже існує й не порожня."
+msgstr "The folder {path} already exists and is not empty."
+
+#: src/nightexpress/views/dialogs/new_project_wizard.py
+#, python-brace-format
+msgid "Буде створено: {path}"
+msgstr "Will be created: {path}"
+
+#: src/nightexpress/views/dialogs/new_project_wizard.py
+msgid "Знайдіть свою плату за назвою або маркуванням на чипі."
+msgstr "Find your board by its name or the marking on the chip."
+
+#: src/nightexpress/views/dialogs/new_project_wizard.py
+#: src/nightexpress/views/dialogs/settings_dialog.py src/nightexpress/views/panels/target_panel.py
+msgid "Плата"
+msgstr "Board"
+
+#: src/nightexpress/views/dialogs/new_project_wizard.py
+msgid "Почніть із порожнього проєкту або виберіть приклад."
+msgstr "Start with an empty project or choose an example."
+
+#: src/nightexpress/views/dialogs/new_project_wizard.py
+msgid "Шаблон"
+msgstr "Template"
+
+#: src/nightexpress/views/dialogs/new_project_wizard.py
+msgid "Створити .gitignore"
+msgstr "Create .gitignore"
+
+#: src/nightexpress/views/dialogs/new_project_wizard.py
+msgid "Файл для git: не додавати до репозиторію теку збірки target/ і файли *.bin"
+msgstr "A file for git: keep the build folder target/ and *.bin files out of the repository"
+
+#: src/nightexpress/views/dialogs/new_project_wizard.py
+msgid "Мінімальний Cargo-проєкт для вибраної плати зі стартовим main.rs."
+msgstr "A minimal Cargo project for the chosen board with a starter main.rs."
+
+#: src/nightexpress/views/dialogs/new_project_wizard.py
+#, python-brace-format
+msgid "Буде створено в {folder}:"
+msgstr "Will be created in {folder}:"
+
+#: src/nightexpress/views/dialogs/new_project_wizard.py
+msgid "Створити"
+msgstr "Create"
+
+#: src/nightexpress/views/dialogs/new_project_wizard.py
+msgid "Назад"
+msgstr "Back"
+
+#: src/nightexpress/views/dialogs/peripheral_dialog.py
+msgid "Додати периферію"
+msgstr "Add peripheral"
+
+#: src/nightexpress/views/dialogs/peripheral_dialog.py src/nightexpress/views/panels/target_panel.py
+msgid "Підключення"
+msgstr "Connection"
+
+#: src/nightexpress/views/dialogs/peripheral_dialog.py
+msgid "Що зміниться в проєкті"
+msgstr "What changes in the project"
+
+#: src/nightexpress/views/dialogs/peripheral_dialog.py
+msgid "Додати"
+msgstr "Add"
+
+#: src/nightexpress/views/dialogs/peripheral_dialog.py
+#, python-brace-format
+msgid "Новий файл: {path}"
+msgstr "New file: {path}"
+
+#: src/nightexpress/views/dialogs/peripheral_dialog.py
+#, python-brace-format
+msgid "Зміниться: {path}"
+msgstr "Changes: {path}"
+
+#: src/nightexpress/views/dialogs/quick_open.py
+msgid "Назва файлу…"
+msgstr "File name…"
+
+#: src/nightexpress/views/dialogs/quick_open.py src/nightexpress/views/dialogs/shortcuts_dialog.py
+msgid "Нічого не знайдено"
+msgstr "Nothing found"
+
+#: src/nightexpress/views/dialogs/settings_dialog.py
+msgid "Ціль компіляції"
+msgstr "Compilation target"
+
+#: src/nightexpress/views/dialogs/settings_dialog.py
+msgid "Застосунок"
+msgstr "Application"
+
+#: src/nightexpress/views/dialogs/settings_dialog.py
+msgid "Готово"
+msgstr "Done"
+
+#: src/nightexpress/views/dialogs/shortcuts_dialog.py
+msgid "Пошук команди або клавіші"
+msgstr "Search for a command or a key"
+
+#: src/nightexpress/views/dialogs/toolchain_dialog.py
+msgid "Встановлює Rust і компоненти для STM32 (target, llvm-tools)."
+msgstr "Installs Rust and the components for STM32 (target, llvm-tools)."
+
+#: src/nightexpress/views/dialogs/toolchain_dialog.py
+msgid "Збирає проєкт — без нього не працює «Зібрати»."
+msgstr "Builds the project — “Build” does not work without it."
+
+#: src/nightexpress/views/dialogs/toolchain_dialog.py
+msgid "Компілятор Rust."
+msgstr "The Rust compiler."
+
+#: src/nightexpress/views/dialogs/toolchain_dialog.py
+msgid "Прошивання через ST-Link. Для прошивання через USB-TTL не потрібен."
+msgstr "Flashing through an ST-Link. Not needed for flashing through USB-TTL."
+
+#: src/nightexpress/views/dialogs/toolchain_dialog.py
+msgid "Необов'язково: прошивання через USB плати (DFU), напр. Black Pill."
+msgstr "Optional: flashing over the board’s USB (DFU), e.g. Black Pill."
+
+#: src/nightexpress/views/dialogs/toolchain_dialog.py
+msgid "Необов'язково: підказки в редакторі (з'являться після MVP)."
+msgstr "Optional: hints in the editor (they will appear after the MVP)."
+
+#: src/nightexpress/views/dialogs/toolchain_dialog.py
+msgid "не встановлено"
+msgstr "not installed"
+
+#: src/nightexpress/views/dialogs/toolchain_dialog.py
+msgid "Інструкція  ↗"
+msgstr "Instructions  ↗"
+
+#: src/nightexpress/views/dialogs/toolchain_dialog.py
+#, python-brace-format
+msgid "Встановиться разом із {tool} — команда вище."
+msgstr "Installed together with {tool} — the command above."
+
+#: src/nightexpress/views/dialogs/toolchain_dialog.py
+msgid "Інструменти Rust"
+msgstr "Rust tools"
+
+#: src/nightexpress/views/dialogs/toolchain_dialog.py
+msgid "Перевіряю інструменти…"
+msgstr "Checking the tools…"
+
+#: src/nightexpress/views/dialogs/toolchain_dialog.py
+msgid "Це займає кілька секунд."
+msgstr "This takes a few seconds."
+
+#: src/nightexpress/views/dialogs/toolchain_dialog.py
+#, python-brace-format
+msgid ""
+"Без {tools} проєкт не збереться. Скопіюйте команду, виконайте її в терміналі й натисніть "
+"«Перевірити знову»."
+msgstr ""
+"The project will not build without {tools}. Copy the command, run it in a terminal and press "
+"“Check again”."
+
+#: src/nightexpress/views/dialogs/toolchain_dialog.py
+#, python-brace-format
+msgid "Можна збирати й прошивати. Необов'язкові: {tools}."
+msgstr "You can build and flash. Optional: {tools}."
+
+#: src/nightexpress/views/dialogs/toolchain_dialog.py
+msgid "Усі інструменти на місці."
+msgstr "All tools are in place."
+
+#: src/nightexpress/views/editor/editor_tabs.py
+msgid "Відкрити файл"
+msgstr "Open file"
+
+#: src/nightexpress/views/editor/editor_tabs.py
+msgid "Закрити файл"
+msgstr "Close file"
+
+#: src/nightexpress/views/editor/editor_tabs.py
+msgid "Є незбережені зміни"
+msgstr "There are unsaved changes"
+
+#: src/nightexpress/views/editor/editor_tabs.py
+#, python-brace-format
+msgid "Закрити ({shortcut})"
+msgstr "Close ({shortcut})"
+
+#: src/nightexpress/views/editor/editor_tabs.py
+msgid "Форматований Markdown"
+msgstr "Rendered Markdown"
+
+#: src/nightexpress/views/editor/editor_tabs.py
+msgid "Закрити інші"
+msgstr "Close others"
+
+#: src/nightexpress/views/editor/editor_tabs.py
+msgid "Закрити всі"
+msgstr "Close all"
+
+#: src/nightexpress/views/editor/editor_tabs.py
+msgid "Показати в дереві"
+msgstr "Show in the tree"
+
+#: src/nightexpress/views/editor/monaco_editor.py
+#, python-brace-format
+msgid "Редактор не встановлено: виконайте {command}."
+msgstr "The editor is not installed: run {command}."
+
+#: src/nightexpress/views/file_tree_view.py src/nightexpress/views/welcome_view.py
+msgid "Показати у Finder"
+msgstr "Show in Finder"
+
+#: src/nightexpress/views/file_tree_view.py
+msgid "Показати у Провіднику"
+msgstr "Show in Explorer"
+
+#: src/nightexpress/views/file_tree_view.py
+msgid "Показати у файловому менеджері"
+msgstr "Show in the file manager"
+
+#: src/nightexpress/views/file_tree_view.py src/nightexpress/views/main_window.py
+msgid "Новий файл…"
+msgstr "New file…"
+
+#: src/nightexpress/views/file_tree_view.py
+msgid "Нова тека…"
+msgstr "New folder…"
+
+#: src/nightexpress/views/file_tree_view.py
+msgid "Перейменувати"
+msgstr "Rename"
+
+#: src/nightexpress/views/editor/editor_tabs.py src/nightexpress/views/file_tree_view.py
+msgid "Скопіювати шлях"
+msgstr "Copy path"
+
+#: src/nightexpress/views/file_tree_view.py
+msgid "Скопіювати відносний шлях"
+msgstr "Copy relative path"
+
+#. a share in per cent; {value} is a number or "<1". Ukrainian puts a space before %.
+#: src/nightexpress/views/formatting.py
+#, python-brace-format
+msgid "{value} %"
+msgstr "{value}%"
+
+#: src/nightexpress/views/formatting.py
+#, python-brace-format
+msgid "{count} байт"
+msgid_plural "{count} байтів"
+msgstr[0] "{count} byte"
+msgstr[1] "{count} bytes"
+
+#: src/nightexpress/views/formatting.py
+#, python-brace-format
+msgid "Програма займає {used} ({percent}%) flash. Максимум — {total}."
+msgstr "The program takes {used} ({percent}%) of flash. The maximum is {total}."
+
+#: src/nightexpress/views/formatting.py
+#, python-brace-format
+msgid "Змінні займають {used} ({percent}%) RAM, для стека лишається {free}."
+msgstr "Variables take {used} ({percent}%) of RAM, leaving {free} for the stack."
+
+#: src/nightexpress/views/formatting.py
+msgid "відкрито сьогодні"
+msgstr "opened today"
+
+#: src/nightexpress/views/formatting.py
+msgid "учора"
+msgstr "yesterday"
+
+#. a Qt date format: d is the day, MMMM the name of the month.
+#: src/nightexpress/views/formatting.py
+msgid "d MMMM"
+msgstr "MMMM d"
+
+#. a Qt date format: d is the day, MMMM the name of the month, yyyy the year.
+#: src/nightexpress/views/formatting.py
+msgid "d MMMM yyyy"
+msgstr "MMMM d, yyyy"
+
+#: src/nightexpress/views/header_bar.py
+#, python-brace-format
+msgid "{app} — Початковий екран"
+msgstr "{app} — Welcome"
+
+#: src/nightexpress/views/header_bar.py src/nightexpress/views/main_window.py
+msgid "Початковий екран"
+msgstr "Welcome"
+
+#: src/nightexpress/views/main_window.py
+msgid "Знайти"
+msgstr "Find"
+
+#: src/nightexpress/views/main_window.py
+msgid "Замінити"
+msgstr "Replace"
+
+#: src/nightexpress/views/main_window.py
+msgid "Перейти до рядка"
+msgstr "Go to line"
+
+#: src/nightexpress/views/main_window.py
+msgid "Закоментувати рядок"
+msgstr "Comment out the line"
+
+#: src/nightexpress/views/main_window.py
+msgid "Наступне таке саме слово"
+msgstr "Next occurrence of the word"
+
+#: src/nightexpress/views/main_window.py
+msgid "Перемістити рядок вгору / вниз"
+msgstr "Move the line up / down"
+
+#: src/nightexpress/views/main_window.py
+msgid "Палітра команд"
+msgstr "Command palette"
+
+#: src/nightexpress/views/main_window.py
+msgid "Перервати команду"
+msgstr "Interrupt the command"
+
+#: src/nightexpress/views/main_window.py
+msgid "Копіювати виділене"
+msgstr "Copy the selection"
+
+#: src/nightexpress/views/main_window.py
+msgid "Вставити"
+msgstr "Paste"
+
+#: src/nightexpress/views/main_window.py src/nightexpress/views/panels/log_toolbar.py
+#: src/nightexpress/views/panels/uart_panel.py
+msgid "Очистити"
+msgstr "Clear"
+
+#: src/nightexpress/views/dialogs/settings_dialog.py src/nightexpress/views/main_window.py
+#: src/nightexpress/views/toolbar_view.py
+msgid "Проєкт"
+msgstr "Project"
+
+#: src/nightexpress/views/main_window.py src/nightexpress/views/welcome_view.py
+msgid "Відкрити проєкт"
+msgstr "Open project"
+
+#: src/nightexpress/views/main_window.py
+msgid "Ще"
+msgstr "More"
+
+#: src/nightexpress/views/main_window.py
+msgid "Показати службові файли"
+msgstr "Show hidden files"
+
+#: src/nightexpress/views/main_window.py
+msgid "Показати теку збірки (target)"
+msgstr "Show the build folder (target)"
+
+#: src/nightexpress/views/main_window.py
+msgid "Результати збірки Cargo: файли .elf, .bin та проміжні"
+msgstr "Cargo build results: .elf, .bin and intermediate files"
+
+#: src/nightexpress/views/main_window.py
+msgid "Згорнути все"
+msgstr "Collapse all"
+
+#: src/nightexpress/views/main_window.py
+#, python-brace-format
+msgid "Скопійовано: {text}"
+msgstr "Copied: {text}"
+
+#: src/nightexpress/views/main_window.py
+msgid "Ціль"
+msgstr "Target"
+
+#: src/nightexpress/views/main_window.py
+msgid "Скопійовано"
+msgstr "Copied"
+
+#: src/nightexpress/views/main_window.py
+msgid "Проблеми"
+msgstr "Problems"
+
+#: src/nightexpress/views/main_window.py
+msgid "Збірка"
+msgstr "Build"
+
+#: src/nightexpress/views/main_window.py
+msgid "Прошивання"
+msgstr "Flashing"
+
+#: src/nightexpress/views/main_window.py src/nightexpress/views/settings_panel.py
+msgid "Термінал"
+msgstr "Terminal"
+
+#: src/nightexpress/views/main_window.py
+msgid "Журнал скопійовано"
+msgstr "Log copied"
+
+#: src/nightexpress/views/main_window.py
+msgid "Показати стан інструментів Rust"
+msgstr "Show the state of the Rust tools"
+
+#: src/nightexpress/views/main_window.py
+msgid "Вибрати пристрій для прошивання"
+msgstr "Choose a device for flashing"
+
+#: src/nightexpress/views/main_window.py
+msgid "0 помилок"
+msgstr "0 errors"
+
+#: src/nightexpress/views/main_window.py
+msgid "Показати вкладку «Проблеми»"
+msgstr "Show the “Problems” tab"
+
+#: src/nightexpress/views/main_window.py
+msgid "Перейти до рядка…"
+msgstr "Go to line…"
+
+#: src/nightexpress/views/main_window.py
+msgid "Файл"
+msgstr "File"
+
+#: src/nightexpress/views/main_window.py
+msgid "Новий проєкт…"
+msgstr "New project…"
+
+#: src/nightexpress/views/main_window.py
+msgid "Відкрити проєкт…"
+msgstr "Open project…"
+
+#: src/nightexpress/views/main_window.py src/nightexpress/views/welcome_view.py
+msgid "Недавні проєкти"
+msgstr "Recent projects"
+
+#: src/nightexpress/views/main_window.py
+msgid "Приклади"
+msgstr "Examples"
+
+#: src/nightexpress/views/main_window.py
+msgid "Перейти до файлу…"
+msgstr "Go to file…"
+
+#: src/nightexpress/views/main_window.py
+msgid "Зберегти"
+msgstr "Save"
+
+#: src/nightexpress/views/main_window.py
+msgid "Зберегти все"
+msgstr "Save all"
+
+#: src/nightexpress/views/main_window.py
+msgid "Закрити вкладку"
+msgstr "Close tab"
+
+#: src/nightexpress/views/main_window.py
+msgid "Закрити проєкт"
+msgstr "Close project"
+
+#: src/nightexpress/views/main_window.py
+msgid "Налаштування…"
+msgstr "Settings…"
+
+#: src/nightexpress/views/main_window.py
+msgid "Вихід"
+msgstr "Quit"
+
+#: src/nightexpress/views/main_window.py
+msgid "Правка"
+msgstr "Edit"
+
+#: src/nightexpress/views/main_window.py
+msgctxt "undo"
+msgid "Скасувати"
+msgstr "Undo"
+
+#: src/nightexpress/views/main_window.py
+msgid "Повторити"
+msgstr "Redo"
+
+#: src/nightexpress/views/main_window.py
+msgid "Вирізати"
+msgstr "Cut"
+
+#: src/nightexpress/views/editor/markdown_preview.py src/nightexpress/views/main_window.py
+msgid "Копіювати"
+msgstr "Copy"
+
+#: src/nightexpress/views/editor/markdown_preview.py src/nightexpress/views/main_window.py
+msgid "Виділити все"
+msgstr "Select all"
+
+#: src/nightexpress/views/main_window.py
+msgid "Знайти…"
+msgstr "Find…"
+
+#: src/nightexpress/views/main_window.py
+msgid "Замінити…"
+msgstr "Replace…"
+
+#: src/nightexpress/views/main_window.py
+msgid "Палітра команд…"
+msgstr "Command palette…"
+
+#: src/nightexpress/views/main_window.py
+msgid "Форматувати документ"
+msgstr "Format document"
+
+#: src/nightexpress/views/main_window.py
+msgid "Перегляд"
+msgstr "View"
+
+#: src/nightexpress/views/main_window.py
+msgid "Перейти до дерева файлів"
+msgstr "Go to the file tree"
+
+#: src/nightexpress/views/main_window.py
+msgid "Панель «Проєкт»"
+msgstr "“Project” panel"
+
+#: src/nightexpress/views/main_window.py
+msgid "Панель «Ціль»"
+msgstr "“Target” panel"
+
+#: src/nightexpress/views/main_window.py
+msgid "Нижня панель"
+msgstr "Bottom panel"
+
+#: src/nightexpress/views/main_window.py
+msgid "Наступна вкладка"
+msgstr "Next tab"
+
+#: src/nightexpress/views/main_window.py
+msgid "Попередня вкладка"
+msgstr "Previous tab"
+
+#: src/nightexpress/views/main_window.py
+msgid "Наступна проблема"
+msgstr "Next problem"
+
+#: src/nightexpress/views/main_window.py
+msgid "Попередня проблема"
+msgstr "Previous problem"
+
+#: src/nightexpress/views/main_window.py
+msgid "Збільшити шрифт"
+msgstr "Increase font size"
+
+#: src/nightexpress/views/main_window.py
+msgid "Зменшити шрифт"
+msgstr "Decrease font size"
+
+#: src/nightexpress/views/main_window.py
+msgid "Звичайний розмір шрифту"
+msgstr "Normal font size"
+
+#: src/nightexpress/views/editor/editor_tabs.py src/nightexpress/views/main_window.py
+#: src/nightexpress/views/toolbar_view.py
+msgid "Зібрати"
+msgstr "Build"
+
+#: src/nightexpress/views/editor/editor_tabs.py src/nightexpress/views/main_window.py
+#: src/nightexpress/views/toolbar_view.py
+msgid "Зібрати й прошити"
+msgstr "Build and flash"
+
+#: src/nightexpress/views/main_window.py src/nightexpress/views/toolbar_view.py
+msgid "Зупинити"
+msgstr "Stop"
+
+#: src/nightexpress/views/main_window.py
+msgid "Очистити збірку"
+msgstr "Clean build"
+
+#: src/nightexpress/views/main_window.py
+msgid "Змінити плату…"
+msgstr "Change board…"
+
+#: src/nightexpress/views/main_window.py
+msgid "Додати периферію…"
+msgstr "Add peripheral…"
+
+#: src/nightexpress/views/main_window.py
+msgid "Відкрити теку проєкту"
+msgstr "Open the project folder"
+
+#: src/nightexpress/views/main_window.py
+msgid "Відкрити в системному терміналі"
+msgstr "Open in the system terminal"
+
+#: src/nightexpress/views/main_window.py
+msgid "Налагодження"
+msgstr "Debug"
+
+#: src/nightexpress/views/main_window.py
+msgid "Почати налагодження (згодом)"
+msgstr "Start debugging (later)"
+
+#: src/nightexpress/views/main_window.py
+msgid "Покрокове налагодження через probe-rs з'явиться після MVP"
+msgstr "Step-by-step debugging through probe-rs will appear after the MVP"
+
+#: src/nightexpress/views/editor/editor_tabs.py src/nightexpress/views/main_window.py
+msgid "Монітор UART"
+msgstr "UART monitor"
+
+#: src/nightexpress/views/main_window.py
+msgid "Довідка"
+msgstr "Help"
+
+#: src/nightexpress/views/dialogs/shortcuts_dialog.py src/nightexpress/views/main_window.py
+msgid "Гарячі клавіші"
+msgstr "Keyboard shortcuts"
+
+#: src/nightexpress/views/main_window.py
+msgid "Перевірити інструменти Rust…"
+msgstr "Check the Rust tools…"
+
+#: src/nightexpress/views/dialogs/about_dialog.py src/nightexpress/views/main_window.py
+msgid "Про програму"
+msgstr "About"
+
+#: src/nightexpress/views/main_window.py
+#, python-brace-format
+msgid "Для плати: {board}"
+msgstr "For the board: {board}"
+
+#: src/nightexpress/views/main_window.py
+msgid "Для цієї плати ще немає прикладів"
+msgstr "There are no examples for this board yet"
+
+#: src/nightexpress/views/main_window.py
+msgid "Показати подробиці"
+msgstr "Show details"
+
+#: src/nightexpress/views/main_window.py
+msgid "не підключено"
+msgstr "not connected"
+
+#: src/nightexpress/views/main_window.py
+#, python-brace-format
+msgid "{count} помилка"
+msgid_plural "{count} помилок"
+msgstr[0] "{count} error"
+msgstr[1] "{count} errors"
+
+#: src/nightexpress/views/main_window.py
+#, python-brace-format
+msgid "{count} попередження"
+msgid_plural "{count} попереджень"
+msgstr[0] "{count} warning"
+msgstr[1] "{count} warnings"
+
+#: src/nightexpress/views/main_window.py
+#, python-brace-format
+msgid "Проблеми ({count})"
+msgstr "Problems ({count})"
+
+#: src/nightexpress/views/main_window.py src/nightexpress/views/panels/problems_panel.py
+msgid "Проблем немає"
+msgstr "No problems"
+
+#: src/nightexpress/views/main_window.py
+#, python-brace-format
+msgid "Ряд {line}, Стовп {column}"
+msgstr "Ln {line}, Col {column}"
+
+#: src/nightexpress/views/main_window.py src/nightexpress/views/settings_panel.py
+msgid "Редактор"
+msgstr "Editor"
+
+#: src/nightexpress/views/main_window.py
+msgid "Виберіть пристрій"
+msgstr "Choose a device"
+
+#: src/nightexpress/views/main_window.py
+msgid "Підключіть ST-Link або USB-TTL адаптер і виберіть його тут — через нього піде прошивка."
+msgstr "Connect an ST-Link or a USB-TTL adapter and choose it here — the firmware will go through it."
+
+#: src/nightexpress/views/main_window.py
+#, python-brace-format
+msgid "Одна кнопка: збірка, прошивання й запуск програми на платі ({shortcut})."
+msgstr "One button: build, flash and start the program on the board ({shortcut})."
+
+#: src/nightexpress/views/main_window.py
+msgid "Вивід плати — у вкладці UART"
+msgstr "The board's output is in the UART tab"
+
+#: src/nightexpress/views/main_window.py
+msgid "Те, що програма надсилає через UART (як приклад Serial Hello), з'являється тут."
+msgstr "What the program sends over UART (like the Serial Hello example) appears here."
+
+#: src/nightexpress/views/dialogs/board_chooser.py src/nightexpress/views/dialogs/boot_mode_dialog.py
+#: src/nightexpress/views/dialogs/new_project_wizard.py
+#: src/nightexpress/views/dialogs/peripheral_dialog.py src/nightexpress/views/main_window.py
+msgid "Скасувати"
+msgstr "Cancel"
+
+#: src/nightexpress/views/main_window.py
+msgid "Незбережені зміни"
+msgstr "Unsaved changes"
+
+#: src/nightexpress/views/main_window.py
+msgid "Зберегти зміни перед закриттям?"
+msgstr "Save the changes before closing?"
+
+#: src/nightexpress/views/main_window.py
+msgid "Не зберігати"
+msgstr "Don't save"
+
+#: src/nightexpress/views/main_window.py
+msgid "Не вдалося відкрити системний термінал."
+msgstr "Could not open the system terminal."
+
+#: src/nightexpress/views/panels/log_toolbar.py
+msgid "Пошук у журналі"
+msgstr "Search the log"
+
+#: src/nightexpress/views/panels/log_toolbar.py
+msgid "Попередній збіг (Shift+Enter)"
+msgstr "Previous match (Shift+Enter)"
+
+#: src/nightexpress/views/panels/log_toolbar.py
+msgid "Наступний збіг (Enter)"
+msgstr "Next match (Enter)"
+
+#: src/nightexpress/views/panels/log_toolbar.py
+msgid "Переносити довгі рядки"
+msgstr "Wrap long lines"
+
+#: src/nightexpress/views/panels/log_toolbar.py
+msgid "Скопіювати все"
+msgstr "Copy all"
+
+#: src/nightexpress/views/panels/log_toolbar.py
+msgctxt "search"
+msgid "немає"
+msgstr "none"
+
+#: src/nightexpress/views/panels/output_panel.py
+msgid "Відкрити в редакторі"
+msgstr "Open in the editor"
+
+#: src/nightexpress/views/panels/problems_panel.py
+msgid "Помилки й попередження компілятора з'являться тут після збірки."
+msgstr "Compiler errors and warnings will appear here after a build."
+
+#: src/nightexpress/views/panels/rtt_panel.py
+msgid "Не підключено. Прошийте через ST-Link проєкт із defmt (приклад «RTT Hello») — вивід з'явиться тут."
+msgstr ""
+"Not connected. Flash a project with defmt (the “RTT Hello” example) through an ST-Link and its "
+"output appears here."
+
+#: src/nightexpress/views/panels/rtt_panel.py src/nightexpress/views/panels/uart_panel.py
+msgid "Відключити"
+msgstr "Disconnect"
+
+#: src/nightexpress/views/panels/rtt_panel.py src/nightexpress/views/panels/uart_panel.py
+msgid "Підключити"
+msgstr "Connect"
+
+#: src/nightexpress/views/panels/target_panel.py
+msgid "З'явиться після збірки"
+msgstr "Appears after a build"
+
+#: src/nightexpress/views/panels/target_panel.py
+msgid "USB-TTL (UART-бутлоадер)"
+msgstr "USB-TTL (UART bootloader)"
+
+#: src/nightexpress/views/panels/target_panel.py
+msgid "USB плати (DFU)"
+msgstr "Board USB (DFU)"
+
+#: src/nightexpress/views/panels/target_panel.py
+#, python-brace-format
+msgid "{used} / {total} байт ({percent})"
+msgstr "{used} / {total} bytes ({percent})"
+
+#: src/nightexpress/views/panels/target_panel.py
+msgid "Ядро:"
+msgstr "Core:"
+
+#: src/nightexpress/views/panels/target_panel.py
+msgid "Flash:"
+msgstr "Flash:"
+
+#: src/nightexpress/views/panels/target_panel.py
+msgid "RAM:"
+msgstr "RAM:"
+
+#: src/nightexpress/views/panels/target_panel.py
+msgid "Пробник:"
+msgstr "Probe:"
+
+#: src/nightexpress/views/panels/target_panel.py
+msgid "Ціль (target):"
+msgstr "Target:"
+
+#: src/nightexpress/views/panels/target_panel.py
+msgid "Докладніше  ›"
+msgstr "Details  ›"
+
+#: src/nightexpress/views/panels/target_panel.py
+msgid "Світлодіод:"
+msgstr "LED:"
+
+#: src/nightexpress/views/panels/target_panel.py
+msgid "Кнопка:"
+msgstr "Button:"
+
+#: src/nightexpress/views/panels/target_panel.py
+msgid "UART:"
+msgstr "UART:"
+
+#: src/nightexpress/views/panels/target_panel.py
+msgid "Остання прошивка"
+msgstr "Last flashing"
+
+#: src/nightexpress/views/panels/target_panel.py
+msgid "Пам'ять"
+msgstr "Memory"
+
+#: src/nightexpress/views/panels/target_panel.py
+msgid "не вибрано"
+msgstr "not chosen"
+
+#: src/nightexpress/views/panels/target_panel.py
+msgid "немає"
+msgstr "none"
+
+#: src/nightexpress/views/panels/target_panel.py
+#, python-brace-format
+msgid "{pin} · світить при низькому рівні"
+msgstr "{pin} · lit by a low level"
+
+#: src/nightexpress/views/panels/target_panel.py
+#, python-brace-format
+msgid "{pin} · світить при високому рівні"
+msgstr "{pin} · lit by a high level"
+
+#: src/nightexpress/views/panels/target_panel.py
+#, python-brace-format
+msgid "{pin} · на платі"
+msgstr "{pin} · on the board"
+
+#: src/nightexpress/views/panels/target_panel.py
+#, python-brace-format
+msgid "Клацніть, щоб скопіювати «{pin}»"
+msgstr "Click to copy “{pin}”"
+
+#: src/nightexpress/views/panels/target_panel.py
+msgid "Пристрій не вибрано — показано типовий спосіб для цієї плати."
+msgstr "No device chosen — the usual method for this board is shown."
+
+#: src/nightexpress/views/panels/target_panel.py
+msgid "Перемичка BOOT0 = 0."
+msgstr "Jumper BOOT0 = 0."
+
+#: src/nightexpress/views/panels/target_panel.py
+msgid "Перед прошиванням: BOOT0 = 1 і Reset. Після — поверніть BOOT0 = 0."
+msgstr "Before flashing: BOOT0 = 1 and Reset. Afterwards set BOOT0 = 0 again."
+
+#: src/nightexpress/views/panels/target_panel.py
+msgid "Перед прошиванням: затисніть BOOT0, натисніть Reset, відпустіть BOOT0."
+msgstr "Before flashing: hold BOOT0, press Reset, release BOOT0."
+
+#: src/nightexpress/views/panels/terminal_panel.py
+#, python-brace-format
+msgid "Термінал не встановлено: виконайте {command}."
+msgstr "The terminal is not installed: run {command}."
+
+#: src/nightexpress/views/panels/uart_panel.py
+msgid "Виберіть адаптер"
+msgstr "Choose an adapter"
+
+#: src/nightexpress/views/panels/uart_panel.py
+msgid "Адаптерів не знайдено"
+msgstr "No adapters found"
+
+#: src/nightexpress/views/panels/uart_panel.py
+msgid "Без закінчення"
+msgstr "No line ending"
+
+#: src/nightexpress/views/panels/uart_panel.py
+msgid "UART-адаптер"
+msgstr "UART adapter"
+
+#: src/nightexpress/views/panels/uart_panel.py
+msgid "Текст"
+msgstr "Text"
+
+#: src/nightexpress/views/panels/uart_panel.py
+msgid "Час"
+msgstr "Time"
+
+#: src/nightexpress/views/panels/uart_panel.py
+msgid "Автопрокрутка"
+msgstr "Autoscroll"
+
+#: src/nightexpress/views/panels/uart_panel.py
+msgid "Пауза"
+msgstr "Pause"
+
+#: src/nightexpress/views/panels/uart_panel.py
+msgid "Пауза: не показувати нові дані, доки не зняти"
+msgstr "Pause: do not show new data until released"
+
+#: src/nightexpress/views/panels/uart_panel.py
+msgid "Зберегти вивід у файл…"
+msgstr "Save the output to a file…"
+
+#: src/nightexpress/views/panels/uart_panel.py
+msgid "Надіслати на плату…  (↑ ↓ — попередні рядки)"
+msgstr "Send to the board…  (↑ ↓ — previous lines)"
+
+#: src/nightexpress/views/panels/uart_panel.py
+msgid "Надіслати"
+msgstr "Send"
+
+#: src/nightexpress/views/panels/uart_panel.py
+#, python-brace-format
+msgid "{baud} бод"
+msgstr "{baud} baud"
+
+#: src/nightexpress/views/panels/uart_panel.py
+msgid "Продовжити показ"
+msgstr "Resume"
+
+#: src/nightexpress/views/settings_panel.py
+msgid "Форматувати файли .rs під час збереження (rustfmt)"
+msgstr "Format .rs files on save (rustfmt)"
+
+#: src/nightexpress/views/settings_panel.py
+msgid "Показувати напрямні парних дужок"
+msgstr "Show bracket pair guides"
+
+#: src/nightexpress/views/settings_panel.py
+msgid "Показувати мінікарту коду праворуч"
+msgstr "Show the code minimap on the right"
+
+#: src/nightexpress/views/settings_panel.py
+msgid "Зберігати змінені файли перед збіркою"
+msgstr "Save changed files before a build"
+
+#: src/nightexpress/views/settings_panel.py
+msgid "Відкривати останній проєкт під час запуску"
+msgstr "Open the last project at start-up"
+
+#: src/nightexpress/views/settings_panel.py
+msgid "Журнали збірки й прошивання"
+msgstr "Build and flashing logs"
+
+#: src/nightexpress/views/settings_panel.py
+msgid "Шрифт редактора:"
+msgstr "Editor font:"
+
+#: src/nightexpress/views/settings_panel.py
+msgid "Шрифт термінала:"
+msgstr "Terminal font:"
+
+#: src/nightexpress/views/settings_panel.py
+msgid "Шрифт UART:"
+msgstr "UART font:"
+
+#: src/nightexpress/views/settings_panel.py
+msgid "Шрифт журналів збірки:"
+msgstr "Build log font:"
+
+#: src/nightexpress/views/settings_panel.py
+msgid "Один розмір для редактора, термінала, UART і журналів"
+msgstr "One size for the editor, terminal, UART and logs"
+
+#: src/nightexpress/views/settings_panel.py
+msgid "Змінити…"
+msgstr "Change…"
+
+#: src/nightexpress/views/settings_panel.py
+msgid "Вигляд"
+msgstr "Appearance"
+
+#: src/nightexpress/views/settings_panel.py
+msgid "Тема:"
+msgstr "Theme:"
+
+#: src/nightexpress/views/settings_panel.py
+msgid "Мова:"
+msgstr "Language:"
+
+#: src/nightexpress/views/settings_panel.py
+msgid "Робота з проєктом"
+msgstr "Working with a project"
+
+#: src/nightexpress/views/dialogs/toolchain_dialog.py src/nightexpress/views/settings_panel.py
+msgid "Інструменти"
+msgstr "Tools"
+
+#: src/nightexpress/views/dialogs/toolchain_dialog.py src/nightexpress/views/settings_panel.py
+msgid "Перевірити знову"
+msgstr "Check again"
+
+#: src/nightexpress/views/dialogs/settings_dialog.py src/nightexpress/views/settings_panel.py
+#: src/nightexpress/views/welcome_view.py
+msgid "Налаштування"
+msgstr "Settings"
+
+#: src/nightexpress/views/settings_panel.py
+msgid "Розмір шрифту:"
+msgstr "Font size:"
+
+#: src/nightexpress/views/dialogs/toolchain_dialog.py src/nightexpress/views/settings_panel.py
+msgid "не працює"
+msgstr "does not work"
+
+#: src/nightexpress/views/dialogs/toolchain_dialog.py src/nightexpress/views/settings_panel.py
+#: src/nightexpress/views/welcome_view.py
+msgid "не знайдено"
+msgstr "not found"
+
+#: src/nightexpress/views/tips.py
+msgid "Пропустити"
+msgstr "Skip"
+
+#: src/nightexpress/views/dialogs/new_project_wizard.py src/nightexpress/views/tips.py
+msgid "Далі"
+msgstr "Next"
+
+#: src/nightexpress/views/panels/log_toolbar.py src/nightexpress/views/tips.py
+#, python-brace-format
+msgid "{current} з {total}"
+msgstr "{current} of {total}"
+
+#: src/nightexpress/views/tips.py
+msgid "Зрозуміло"
+msgstr "Got it"
+
+#: src/nightexpress/views/dialogs/about_dialog.py src/nightexpress/views/dialogs/shortcuts_dialog.py
+#: src/nightexpress/views/dialogs/toolchain_dialog.py src/nightexpress/views/editor/editor_tabs.py
+#: src/nightexpress/views/toast.py
+msgid "Закрити"
+msgstr "Close"
+
+#: src/nightexpress/views/toolbar_view.py
+msgid "Зібрати проєкт (⌘B / Ctrl+B)"
+msgstr "Build the project (⌘B / Ctrl+B)"
+
+#: src/nightexpress/views/toolbar_view.py
+msgid "Зібрати й прошити плату (⌘U / Ctrl+U)"
+msgstr "Build and flash the board (⌘U / Ctrl+U)"
+
+#: src/nightexpress/views/toolbar_view.py
+msgid "Програматори"
+msgstr "Programmers"
+
+#: src/nightexpress/views/toolbar_view.py
+msgid "USB-TTL адаптери"
+msgstr "USB-TTL adapters"
+
+#: src/nightexpress/views/toolbar_view.py
+msgid "Плати в режимі DFU (USB)"
+msgstr "Boards in DFU mode (USB)"
+
+#: src/nightexpress/views/toolbar_view.py
+msgid "Плата (чип)"
+msgstr "Board (chip)"
+
+#: src/nightexpress/views/toolbar_view.py
+msgid "Ціль компіляції: визначається чипом"
+msgstr "Compilation target: determined by the chip"
+
+#: src/nightexpress/views/dialogs/settings_dialog.py src/nightexpress/views/toolbar_view.py
+msgid "Профіль збірки"
+msgstr "Build profile"
+
+#: src/nightexpress/views/toolbar_view.py
+msgid "Вибрати програматор або адаптер для прошивання"
+msgstr "Choose a programmer or an adapter for flashing"
+
+#: src/nightexpress/views/toolbar_view.py src/nightexpress/views/welcome_view.py
+msgid "Відкрити…"
+msgstr "Open…"
+
+#: src/nightexpress/views/toolbar_view.py
+#, python-brace-format
+msgid "{device} підключено"
+msgstr "{device} connected"
+
+#: src/nightexpress/views/toolbar_view.py
+msgid "Пристроїв не знайдено"
+msgstr "No devices found"
+
+#: src/nightexpress/views/toolbar_view.py
+msgid "Назвати пристрій…"
+msgstr "Name the device…"
+
+#: src/nightexpress/views/toolbar_view.py
+msgid "Від'єднати"
+msgstr "Disconnect"
+
+#: src/nightexpress/views/toolbar_view.py
+msgid "Зупинити поточну операцію (⌘. / Ctrl+.)"
+msgstr "Stop the current operation (⌘. / Ctrl+.)"
+
+#: src/nightexpress/views/welcome_view.py
+msgid "необов'язково"
+msgstr "optional"
+
+#: src/nightexpress/views/welcome_view.py
+msgid "Показати в теці"
+msgstr "Show in folder"
+
+#: src/nightexpress/views/welcome_view.py
+#, python-brace-format
+msgid "Теки {path} більше немає. Клацніть правою кнопкою, щоб прибрати проєкт зі списку."
+msgstr "The folder {path} no longer exists. Right-click to remove the project from the list."
+
+#: src/nightexpress/views/welcome_view.py
+msgid "Відкрити"
+msgstr "Open"
+
+#: src/nightexpress/views/welcome_view.py
+msgid "Прибрати зі списку"
+msgstr "Remove from the list"
+
+#: src/nightexpress/views/welcome_view.py
+#, python-brace-format
+msgid "Створити проєкт із прикладу «{title}»"
+msgstr "Create a project from the example “{title}”"
+
+#: src/nightexpress/views/welcome_view.py
+msgid "Перевіряю середовище…"
+msgstr "Checking the environment…"
+
+#: src/nightexpress/views/welcome_view.py
+msgid "Перевірити налаштування  ›"
+msgstr "Check the setup  ›"
+
+#: src/nightexpress/views/welcome_view.py
+msgid "Поки не потрібен: підказки в редакторі з'являться після MVP."
+msgstr "Not needed yet: hints in the editor will appear after the MVP."
+
+#: src/nightexpress/views/welcome_view.py
+msgid "не перевірено"
+msgstr "not checked"
+
+#: src/nightexpress/views/dialogs/toolchain_dialog.py src/nightexpress/views/welcome_view.py
+msgid "Потрібне налаштування"
+msgstr "Setup needed"
+
+#: src/nightexpress/views/dialogs/toolchain_dialog.py src/nightexpress/views/welcome_view.py
+msgid "Середовище готове"
+msgstr "The environment is ready"
+
+#: src/nightexpress/views/welcome_view.py
+msgid "Вітаємо у NightExpress"
+msgstr "Welcome to NightExpress"
+
+#: src/nightexpress/views/welcome_view.py
+msgid "Rust для STM32 — почніть із нового проєкту або продовжте роботу"
+msgstr "Rust for STM32 — start with a new project or continue your work"
+
+#: src/nightexpress/views/dialogs/new_project_wizard.py src/nightexpress/views/welcome_view.py
+msgid "Новий проєкт"
+msgstr "New project"
+
+#: src/nightexpress/views/welcome_view.py
+msgid "Створити Cargo-проєкт для STM32"
+msgstr "Create a Cargo project for STM32"
+
+#: src/nightexpress/views/welcome_view.py
+msgid "Відкрити наявну теку Cargo"
+msgstr "Open an existing Cargo folder"
+
+#: src/nightexpress/views/welcome_view.py
+msgid "Поки порожньо. Створіть перший проєкт кнопкою «Новий проєкт» вище або почніть із прикладу нижче."
+msgstr ""
+"Nothing here yet. Create your first project with the “New project” button above or start from an "
+"example below."
+
+#: src/nightexpress/views/welcome_view.py
+msgid "Почати з прикладу"
+msgstr "Start from an example"
+
+#: src/nightexpress/views/welcome_view.py
+msgid "Проєкти"
+msgstr "Projects"
+
+#: src/nightexpress/views/welcome_view.py
+msgid "Проєктів поки немає — створіть перший."
+msgstr "No projects yet — create the first one."
+
+#: src/nightexpress/views/welcome_view.py
+msgid "Початок"
+msgstr "Home"
+

@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "chips": [
+    {
+      "id": "STM32F103C6",
+      "family": "STM32F1",
+      "core": "cortex-m3",
+      "target_triple": "thumbv7m-none-eabi",
+      "flash_kb": 32,
+      "ram_kb": 10,
+      "embassy_feature": "stm32f103c6",
+      "probe_rs_name": "STM32F103C6",
+      "dev_id": "0x412",
+      "idcode_address": "0xE0042000",
+      "flash_size_address": "0x1FFFF7E0",
+      "default_sysclk_hz": 8000000,
+      "bootloader": {
+        "family": "F1",
+        "usart": "USART1",
+        "tx_pin": "PA9",
+        "rx_pin": "PA10"
+      }
+    },
+    {
+      "id": "STM32F103C8",
+      "family": "STM32F1",
+      "core": "cortex-m3",
+      "target_triple": "thumbv7m-none-eabi",
+      "flash_kb": 64,
+      "ram_kb": 20,
+      "embassy_feature": "stm32f103c8",
+      "probe_rs_name": "STM32F103C8",
+      "dev_id": "0x410",
+      "idcode_address": "0xE0042000",
+      "flash_size_address": "0x1FFFF7E0",
+      "default_sysclk_hz": 8000000,
+      "bootloader": {
+        "family": "F1",
+        "usart": "USART1",
+        "tx_pin": "PA9",
+        "rx_pin": "PA10"
+      }
+    },
+    {
+      "id": "STM32F411CE",
+      "family": "STM32F4",
+      "core": "cortex-m4",
+      "target_triple": "thumbv7em-none-eabihf",
+      "flash_kb": 512,
+      "ram_kb": 128,
+      "embassy_feature": "stm32f411ce",
+      "probe_rs_name": "STM32F411CE",
+      "dev_id": "0x431",
+      "idcode_address": "0xE0042000",
+      "flash_size_address": "0x1FFF7A22",
+      "default_sysclk_hz": 16000000,
+      "bootloader": {
+        "family": "F4",
+        "usart": "USART1",
+        "tx_pin": "PA9",
+        "rx_pin": "PA10"
+      }
+    },
+    {
+      "id": "STM32F401RE",
+      "family": "STM32F4",
+      "core": "cortex-m4",
+      "target_triple": "thumbv7em-none-eabihf",
+      "flash_kb": 512,
+      "ram_kb": 96,
+      "embassy_feature": "stm32f401re",
+      "probe_rs_name": "STM32F401RE",
+      "dev_id": "0x433",
+      "idcode_address": "0xE0042000",
+      "flash_size_address": "0x1FFF7A22",
+      "default_sysclk_hz": 16000000,
+      "bootloader": {
+        "family": "F4",
+        "usart": "USART1",
+        "tx_pin": "PA9",
+        "rx_pin": "PA10"
+      }
+    },
+    {
+      "id": "STM32F401CC",
+      "family": "STM32F4",
+      "core": "cortex-m4",
+      "target_triple": "thumbv7em-none-eabihf",
+      "flash_kb": 256,
+      "ram_kb": 64,
+      "embassy_feature": "stm32f401cc",
+      "probe_rs_name": "STM32F401CC",
+      "dev_id": "0x423",
+      "idcode_address": "0xE0042000",
+      "flash_size_address": "0x1FFF7A22",
+      "default_sysclk_hz": 16000000,
+      "bootloader": {
+        "family": "F4",
+        "usart": "USART1",
+        "tx_pin": "PA9",
+        "rx_pin": "PA10"
+      }
+    },
+    {
+      "id": "STM32F103RB",
+      "family": "STM32F1",
+      "core": "cortex-m3",
+      "target_triple": "thumbv7m-none-eabi",
+      "flash_kb": 128,
+      "ram_kb": 20,
+      "embassy_feature": "stm32f103rb",
+      "probe_rs_name": "STM32F103RB",
+      "dev_id": "0x410",
+      "idcode_address": "0xE0042000",
+      "flash_size_address": "0x1FFFF7E0",
+      "default_sysclk_hz": 8000000,
+      "bootloader": {
+        "family": "F1",
+        "usart": "USART1",
+        "tx_pin": "PA9",
+        "rx_pin": "PA10"
+      }
+    },
+    {
+      "id": "STM32F411RE",
+      "family": "STM32F4",
+      "core": "cortex-m4",
+      "target_triple": "thumbv7em-none-eabihf",
+      "flash_kb": 512,
+      "ram_kb": 128,
+      "embassy_feature": "stm32f411re",
+      "probe_rs_name": "STM32F411RE",
+      "dev_id": "0x431",
+      "idcode_address": "0xE0042000",
+      "flash_size_address": "0x1FFF7A22",
+      "default_sysclk_hz": 16000000,
+      "bootloader": {
+        "family": "F4",
+        "usart": "USART1",
+        "tx_pin": "PA9",
+        "rx_pin": "PA10"
+      }
+    },
+    {
+      "id": "STM32F446RE",
+      "family": "STM32F4",
+      "core": "cortex-m4",
+      "target_triple": "thumbv7em-none-eabihf",
+      "flash_kb": 512,
+      "ram_kb": 128,
+      "embassy_feature": "stm32f446re",
+      "probe_rs_name": "STM32F446RE",
+      "dev_id": "0x421",
+      "idcode_address": "0xE0042000",
+      "flash_size_address": "0x1FFF7A22",
+      "default_sysclk_hz": 16000000,
+      "bootloader": {
+        "family": "F4",
+        "usart": "USART1",
+        "tx_pin": "PA9",
+        "rx_pin": "PA10"
+      }
+    },
+    {
+      "id": "STM32L476RG",
+      "family": "STM32L4",
+      "core": "cortex-m4",
+      "target_triple": "thumbv7em-none-eabihf",
+      "flash_kb": 1024,
+      "ram_kb": 96,
+      "embassy_feature": "stm32l476rg",
+      "probe_rs_name": "STM32L476RG",
+      "dev_id": "0x415",
+      "idcode_address": "0xE0042000",
+      "flash_size_address": "0x1FFF75E0",
+      "default_sysclk_hz": 4000000,
+      "bootloader": {
+        "family": "L4",
+        "usart": "USART1",
+        "tx_pin": "PA9",
+        "rx_pin": "PA10"
+      }
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "boards": [
+    {
+      "id": "stm32f103c6-minimal",
+      "display_name": "STM32F103C6",
+      "chip": "STM32F103C6",
+      "aliases": ["STM32F103C6T6A", "STM32F103C6T6"],
+      "nicknames": ["Blue Pill", "Blue Pill F103C6"],
+      "led": { "pin": "PC13", "active_low": true },
+      "button": { "pin": "PA0", "active_low": true, "on_board": false },
+      "uart": { "peripheral": "USART1", "tx_pin": "PA9", "rx_pin": "PA10" },
+      "i2c": { "peripheral": "I2C1", "scl_pin": "PB6", "sda_pin": "PB7" },
+      "upload_methods": [
+        { "method": "probe-rs", "status": "verified" },
+        { "method": "serial-bootloader", "status": "experimental" }
+      ],
+      "default_upload_method": "probe-rs",
+      "status": "verified",
+      "notes": "Verified on 14.11.2026: ST-Link V2 + probe-rs 0.32.0, IDCODE 0x10006412 (rev A), the LED on PC13 blinks."
+    },
+    {
+      "id": "stm32f103c8-bluepill",
+      "display_name": "STM32F103C8",
+      "chip": "STM32F103C8",
+      "aliases": ["STM32F103C8T6"],
+      "nicknames": ["Blue Pill", "Blue Pill F103C8"],
+      "led": { "pin": "PC13", "active_low": true },
+      "button": { "pin": "PA0", "active_low": true, "on_board": false },
+      "uart": { "peripheral": "USART1", "tx_pin": "PA9", "rx_pin": "PA10" },
+      "i2c": { "peripheral": "I2C1", "scl_pin": "PB6", "sda_pin": "PB7" },
+      "upload_methods": [
+        { "method": "probe-rs", "status": "experimental" },
+        { "method": "serial-bootloader", "status": "experimental" }
+      ],
+      "default_upload_method": "probe-rs",
+      "status": "experimental",
+      "notes": "Not verified on hardware: data from the STM32F103x8 documentation (64 KB flash, 20 KB RAM, DEV_ID 0x410)."
+    },
+    {
+      "id": "stm32f401cc-blackpill",
+      "display_name": "STM32F401CC",
+      "chip": "STM32F401CC",
+      "aliases": ["STM32F401CCU6"],
+      "nicknames": ["Black Pill", "Black Pill F401", "WeAct Black Pill"],
+      "led": { "pin": "PC13", "active_low": true },
+      "button": { "pin": "PA0", "active_low": true, "on_board": true },
+      "uart": { "peripheral": "USART1", "tx_pin": "PA9", "rx_pin": "PA10" },
+      "i2c": { "peripheral": "I2C1", "scl_pin": "PB6", "sda_pin": "PB7" },
+      "upload_methods": [
+        { "method": "probe-rs", "status": "experimental" },
+        { "method": "serial-bootloader", "status": "experimental" },
+        { "method": "usb-dfu", "status": "experimental" }
+      ],
+      "default_upload_method": "probe-rs",
+      "status": "experimental",
+      "notes": "Not verified on hardware: WeAct Black Pill V3.x from its schematic (LED C13 active low, KEY button A0 to GND, BOOT0 button) and the STM32F401xB/xC documentation (256 KB flash, 64 KB RAM, DEV_ID 0x423)."
+    },
+    {
+      "id": "stm32f411ce-blackpill",
+      "display_name": "STM32F411CE",
+      "chip": "STM32F411CE",
+      "aliases": ["STM32F411CEU6"],
+      "nicknames": ["Black Pill", "Black Pill F411", "WeAct Black Pill"],
+      "led": { "pin": "PC13", "active_low": true },
+      "button": { "pin": "PA0", "active_low": true, "on_board": true },
+      "uart": { "peripheral": "USART1", "tx_pin": "PA9", "rx_pin": "PA10" },
+      "i2c": { "peripheral": "I2C1", "scl_pin": "PB6", "sda_pin": "PB7" },
+      "upload_methods": [
+        { "method": "probe-rs", "status": "experimental" },
+        { "method": "serial-bootloader", "status": "experimental" },
+        { "method": "usb-dfu", "status": "experimental" }
+      ],
+      "default_upload_method": "probe-rs",
+      "status": "experimental",
+      "notes": "Not verified on hardware: WeAct Black Pill V3.x from its schematic (LED C13 active low, KEY button A0 to GND, BOOT0 button) and the STM32F411xC/xE documentation (512 KB flash, 128 KB RAM, DEV_ID 0x431)."
+    },
+    {
+      "id": "nucleo-f103rb",
+      "display_name": "STM32F103RB",
+      "chip": "STM32F103RB",
+      "aliases": ["STM32F103RBT6"],
+      "nicknames": ["Nucleo-F103RB", "Nucleo F103", "NUCLEO-F103RB"],
+      "led": { "pin": "PA5", "active_low": false },
+      "button": { "pin": "PC13", "active_low": true, "on_board": true },
+      "uart": { "peripheral": "USART2", "tx_pin": "PA2", "rx_pin": "PA3" },
+      "i2c": { "peripheral": "I2C1", "scl_pin": "PB8", "sda_pin": "PB9" },
+      "upload_methods": [
+        { "method": "probe-rs", "status": "experimental" }
+      ],
+      "default_upload_method": "probe-rs",
+      "status": "experimental",
+      "notes": "Not verified on hardware: NUCLEO-64 user manual UM1724 (on-board ST-LINK/V2-1, LD2 on PA5 active high, B1 on PC13 active low, USART2 PA2/PA3 to the ST-LINK virtual COM port) and the STM32F103xB documentation (128 KB flash, 20 KB RAM, DEV_ID 0x410)."
+    },
+    {
+      "id": "nucleo-f401re",
+      "display_name": "STM32F401RE",
+      "chip": "STM32F401RE",
+      "aliases": ["STM32F401RET6"],
+      "nicknames": ["Nucleo-F401RE", "Nucleo F401", "NUCLEO-F401RE"],
+      "led": { "pin": "PA5", "active_low": false },
+      "button": { "pin": "PC13", "active_low": true, "on_board": true },
+      "uart": { "peripheral": "USART2", "tx_pin": "PA2", "rx_pin": "PA3" },
+      "i2c": { "peripheral": "I2C1", "scl_pin": "PB8", "sda_pin": "PB9" },
+      "upload_methods": [
+        { "method": "probe-rs", "status": "experimental" }
+      ],
+      "default_upload_method": "probe-rs",
+      "status": "experimental",
+      "notes": "Not verified on hardware: NUCLEO-F401RE user manual UM1724 (on-board ST-LINK/V2-1, LD2 on PA5 active high, B1 on PC13 active low, USART2 PA2/PA3 to the ST-LINK virtual COM port) and the STM32F401xD/xE documentation (512 KB flash, 96 KB RAM, DEV_ID 0x433)."
+    },
+    {
+      "id": "nucleo-f411re",
+      "display_name": "STM32F411RE",
+      "chip": "STM32F411RE",
+      "aliases": ["STM32F411RET6"],
+      "nicknames": ["Nucleo-F411RE", "Nucleo F411", "NUCLEO-F411RE"],
+      "led": { "pin": "PA5", "active_low": false },
+      "button": { "pin": "PC13", "active_low": true, "on_board": true },
+      "uart": { "peripheral": "USART2", "tx_pin": "PA2", "rx_pin": "PA3" },
+      "i2c": { "peripheral": "I2C1", "scl_pin": "PB8", "sda_pin": "PB9" },
+      "upload_methods": [
+        { "method": "probe-rs", "status": "experimental" }
+      ],
+      "default_upload_method": "probe-rs",
+      "status": "experimental",
+      "notes": "Not verified on hardware: NUCLEO-64 user manual UM1724 (on-board ST-LINK/V2-1, LD2 on PA5 active high, B1 on PC13 active low, USART2 PA2/PA3 to the ST-LINK virtual COM port) and the STM32F411xC/xE documentation (512 KB flash, 128 KB RAM, DEV_ID 0x431)."
+    },
+    {
+      "id": "nucleo-f446re",
+      "display_name": "STM32F446RE",
+      "chip": "STM32F446RE",
+      "aliases": ["STM32F446RET6"],
+      "nicknames": ["Nucleo-F446RE", "Nucleo F446", "NUCLEO-F446RE"],
+      "led": { "pin": "PA5", "active_low": false },
+      "button": { "pin": "PC13", "active_low": true, "on_board": true },
+      "uart": { "peripheral": "USART2", "tx_pin": "PA2", "rx_pin": "PA3" },
+      "i2c": { "peripheral": "I2C1", "scl_pin": "PB8", "sda_pin": "PB9" },
+      "upload_methods": [
+        { "method": "probe-rs", "status": "experimental" }
+      ],
+      "default_upload_method": "probe-rs",
+      "status": "experimental",
+      "notes": "Not verified on hardware: NUCLEO-64 user manual UM1724 (on-board ST-LINK/V2-1, LD2 on PA5 active high, B1 on PC13 active low, USART2 PA2/PA3 to the ST-LINK virtual COM port) and the STM32F446xC/xE documentation (512 KB flash, 128 KB RAM, DEV_ID 0x421)."
+    },
+    {
+      "id": "nucleo-l476rg",
+      "display_name": "STM32L476RG",
+      "chip": "STM32L476RG",
+      "aliases": ["STM32L476RGT6"],
+      "nicknames": ["Nucleo-L476RG", "Nucleo L476", "NUCLEO-L476RG"],
+      "led": { "pin": "PA5", "active_low": false },
+      "button": { "pin": "PC13", "active_low": true, "on_board": true },
+      "uart": { "peripheral": "USART2", "tx_pin": "PA2", "rx_pin": "PA3" },
+      "i2c": { "peripheral": "I2C1", "scl_pin": "PB8", "sda_pin": "PB9" },
+      "upload_methods": [
+        { "method": "probe-rs", "status": "experimental" }
+      ],
+      "default_upload_method": "probe-rs",
+      "status": "experimental",
+      "notes": "Not verified on hardware: NUCLEO-64 user manual UM1724 (on-board ST-LINK/V2-1, LD2 on PA5 active high, B1 on PC13 active low, USART2 PA2/PA3 to the ST-LINK virtual COM port) and the STM32L476xx documentation (1 MB flash, 96 KB SRAM1 (+32 KB SRAM2), DEV_ID 0x415, MSI 4 MHz after reset)."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+# {{ project_name }}
+
+The **RTT Hello** example logs a message every half second through the debug probe and
+blinks the LED on `{{ led_pin }}`. The messages are read by the ST-Link over SWD (RTT) and
+decoded on the computer by [defmt](https://defmt.ferrous-systems.com): no UART adapter is
+needed.
+
+## Target board
+
+**{{ board_name_en }}** uses the `{{ chip_id }}` microcontroller with
+{{ flash_kb }} KB of flash and {{ ram_kb }} KB of RAM. The Rust target is `{{ target_triple }}`.
+
+## Build and see the output
+
+Flash it through an ST-Link: the messages appear in the "RTT" tab. From the command line:
+
+```sh
+cargo build --release
+probe-rs run --chip {{ probe_rs_name }} target/{{ target_triple }}/release/{{ project_name }}
+```
+
+The firmware ELF is written to `target/{{ target_triple }}/release/{{ project_name }}`.
+
+Change `DEFMT_LOG` in `.cargo/config.toml` to see more (`debug`, `trace`) or fewer messages.

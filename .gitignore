@@ -1,0 +1,28 @@
+/dev/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Rust
+target/
+
+# Third-party web builds (scripts/fetch_monaco.py, scripts/fetch_xterm.py)
+src/nightexpress/resources/editor/monaco/
+src/nightexpress/resources/terminal/xterm/
+
+# OS / IDE
+.DS_Store
+.idea/
+
+# Secrets
+.env
+.env.*

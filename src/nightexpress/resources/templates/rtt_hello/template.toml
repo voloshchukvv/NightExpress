@@ -1,0 +1,4 @@
+# Template metadata (not copied into the project).
+title = "RTT Hello"
+requires = ["led"]
+open_on_create = "src/main.rs"

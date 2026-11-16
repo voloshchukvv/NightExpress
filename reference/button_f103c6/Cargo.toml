@@ -1,0 +1,26 @@
+[package]
+name = "button_f103c6"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+# One HAL for all STM32s: the chip is a feature; `memory-x` generates memory.x (32K flash / 10K RAM).
+embassy-stm32 = { version = "0.6.0", features = ["stm32f103c6", "memory-x"] }
+cortex-m = { version = "0.7.7", features = ["critical-section-single-core"] }
+cortex-m-rt = "0.7.5"
+panic-halt = "1.0.0"
+
+[profile.dev]
+opt-level = "s"     # even debug builds must fit into 32 KB of flash
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+debug = true        # debug info stays in the ELF, it is not flashed
+
+[package.metadata.nightexpress]
+schema = 1
+board = "stm32f103c6-minimal"
+upload_method = "probe-rs"

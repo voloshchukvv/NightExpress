@@ -1,0 +1,37 @@
+//! Blink for {{ chip_id }} (board `{{ board_id }}`).
+//!
+{% if led_active_low %}
+//! The LED on {{ led_pin }} is wired to 3.3V through a resistor, so it lights up when
+//! the pin is driven LOW (active low). If your board has the LED on another
+//! pin, change `p.{{ led_pin }}` below.
+{% else %}
+//! The LED on {{ led_pin }} lights up when the pin is driven HIGH (active high).
+//! If your board has the LED on another pin, change `p.{{ led_pin }}` below.
+{% endif %}
+
+#![no_std]
+#![no_main]
+
+use cortex_m_rt::entry;
+use embassy_stm32::gpio::{Level, Output, Speed};
+use panic_halt as _; // on panic! the core halts in an infinite loop
+
+#[entry]
+fn main() -> ! {
+    // Default clocks: internal HSI oscillator, {{ sysclk_mhz }} MHz.
+    let p = embassy_stm32::init(Default::default());
+
+{% if led_active_low %}
+    // Level::High = LED off (active low).
+    let mut led = Output::new(p.{{ led_pin }}, Level::High, Speed::Low);
+{% else %}
+    // Level::Low = LED off (active high).
+    let mut led = Output::new(p.{{ led_pin }}, Level::Low, Speed::Low);
+{% endif %}
+
+    loop {
+        led.toggle();
+        // At least {{ half_second_cycles_text }} cycles ~ 0.5 s at {{ sysclk_mhz }} MHz -> blinks once per second.
+        cortex_m::asm::delay({{ half_second_cycles_rust }});
+    }
+}

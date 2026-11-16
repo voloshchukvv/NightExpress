@@ -1,0 +1,5 @@
+[build]
+target = "{{ target_triple }}"   # {{ core_description }}
+
+[target.{{ target_triple }}]
+rustflags = ["-C", "link-arg=-Tlink.x"]

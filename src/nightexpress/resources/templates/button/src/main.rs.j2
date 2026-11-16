@@ -1,0 +1,45 @@
+//! Button for {{ chip_id }} (board `{{ board_id }}`).
+//!
+//! The LED on {{ led_pin }} is lit while the button on {{ button_pin }} is held down.
+{% if not button_on_board %}
+//! This board has no user button: connect one between {{ button_pin }} and {{ "GND" if button_active_low else "3.3V" }}.
+{% endif %}
+{% if button_active_low %}
+//! The internal pull-up keeps the pin HIGH while the button is released;
+//! a press connects it to GND, so "pressed" reads as LOW.
+{% else %}
+//! The internal pull-down keeps the pin LOW while the button is released;
+//! a press connects it to 3.3V, so "pressed" reads as HIGH.
+{% endif %}
+
+#![no_std]
+#![no_main]
+
+use cortex_m_rt::entry;
+use embassy_stm32::gpio::{Input, Level, Output, Pull, Speed};
+use panic_halt as _; // on panic! the core halts in an infinite loop
+
+#[entry]
+fn main() -> ! {
+    // Default clocks: internal HSI oscillator, {{ sysclk_mhz }} MHz.
+    let p = embassy_stm32::init(Default::default());
+
+    let button = Input::new(p.{{ button_pin }}, Pull::{{ "Up" if button_active_low else "Down" }});
+{% if led_active_low %}
+    // Level::High = LED off (active low).
+    let mut led = Output::new(p.{{ led_pin }}, Level::High, Speed::Low);
+{% else %}
+    // Level::Low = LED off (active high).
+    let mut led = Output::new(p.{{ led_pin }}, Level::Low, Speed::Low);
+{% endif %}
+
+    loop {
+        let pressed = button.{{ "is_low" if button_active_low else "is_high" }}();
+{% if led_active_low %}
+        // Active-low LED: LOW lights it up.
+        led.set_level(if pressed { Level::Low } else { Level::High });
+{% else %}
+        led.set_level(if pressed { Level::High } else { Level::Low });
+{% endif %}
+    }
+}

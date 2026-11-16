@@ -1,0 +1,2 @@
+   Compiling blinky_f103c6 v0.1.0 (/work/blinky_f103c6)
+    Finished `release` profile [optimized + debuginfo] target(s) in 0.23s

@@ -1,0 +1,36 @@
+# A module the "Add peripheral" dialog can add to a project. The snippets are Jinja2:
+# p (the name of the peripherals from embassy_stm32::init), bus, scl, sda (the chosen pins) and
+# i2c (this module's device on the shared bus, e.g. RefCellDevice::new(&i2c1)).
+id = "bmp280"
+name = "BMP280"
+module = "bmp280"   # the driver becomes src/bmp280.rs, used through `mod bmp280;`
+bus = "i2c"
+
+# Module pin -> board pin; {scl} and {sda} are the chosen I2C pins. CSB and SDO stay free.
+wiring = [["VCC", "3.3V"], ["GND", "GND"], ["SCL", "{scl}"], ["SDA", "{sda}"]]
+
+init = """
+// BMP280 on {{ bus }} (added by "Add peripheral").
+let mut bmp280 = bmp280::Bmp280::new({{ i2c }});
+match bmp280.init() {
+    Ok(id) => defmt::info!("BMP280 found at {=u8:#x}, CHIP_ID = {=u8:#x}", bmp280.address(), id),
+    Err(bmp280::Error::UnknownDevice(id)) => defmt::error!("BMP280: CHIP_ID = {=u8:#x}, another chip at 0x76/0x77", id),
+    Err(_) => defmt::error!("BMP280 does not answer: check the wires and 3.3 V"),
+}
+"""
+
+loop = """
+if let Ok(r) = bmp280.read() {
+    defmt::info!(
+        "BMP280: {}.{} C | {} Pa",  // 101325 Pa = 1013.25 hPa
+        r.temperature_centi_c / 100, (r.temperature_centi_c % 100).abs() / 10, r.pressure_pa,
+    );
+}
+"""
+
+[description]
+uk = "Барометр і термометр (модулі HW-611, GY-BMP280; також BME280). Тиск і температура йдуть у вкладку RTT."
+en = "Barometer and thermometer (HW-611, GY-BMP280 modules; also BME280). Pressure and temperature go to the RTT tab."
+es = "Barómetro y termómetro (módulos HW-611, GY-BMP280; también BME280). La presión y la temperatura van a la pestaña RTT."
+fr = "Baromètre et thermomètre (modules HW-611, GY-BMP280 ; aussi BME280). La pression et la température vont dans l’onglet RTT."
+de = "Barometer und Thermometer (Module HW-611, GY-BMP280; auch BME280). Druck und Temperatur erscheinen in der Registerkarte RTT."
